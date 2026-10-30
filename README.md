@@ -48,7 +48,7 @@ Tests use a separate authentication emulator on port 9199 and an isolated, ephem
 - Optional Steam linking with state validation and account ownership checks through Steam OpenID.
 - Responsive layouts, keyboard-accessible forms, focus states, spoiler concealment, and honest empty states.
 
-The starter catalog contains 14 actual games. No community reviews, accounts, votes, or scores are seeded. Initial metadata comes from the Steam Store; the first four cover illustrations reuse the supplied design references. Other starter artwork comes from the corresponding Steam Store pages.
+The starter catalog contains 14 actual games. No community reviews, accounts, votes, or scores are seeded. Initial metadata and artwork come from the corresponding Steam Store pages. Design-reference screenshots are not used as game artwork.
 
 ## Production
 

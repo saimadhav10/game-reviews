@@ -99,13 +99,6 @@ const titles = [
 ];
 await mkdir("public/images", { recursive: true });
 await mkdir(".local", { recursive: true });
-const reference = await readFile(
-  "uiassets/saint_regus_home_page/code.html",
-  "utf8",
-);
-const artUrls = [...reference.matchAll(/<img[^>]*src="([^"]+)"/g)].map(
-  (x) => x[1],
-);
 const q = (value) => `'${String(value).replaceAll("'", "''")}'`;
 const inserts = [
   "-- Starter catalog from public Steam Store metadata. No ratings, users, reviews, or votes.",
@@ -129,22 +122,14 @@ for (const [index, [slug, appid, platforms, genres]] of titles.entries()) {
   }
   const game = payload[appid]?.data;
   if (!game) throw new Error(`Missing Steam metadata for ${appid}`);
-  const source =
-    index < 4 && artUrls[index] ? artUrls[index] : game.header_image;
-  const asset = await fetch(source, { signal: AbortSignal.timeout(30000) });
-  if (!asset.ok) throw new Error(`Image request failed for ${slug}`);
-  await writeFile(
-    `public/images/${slug}.jpg`,
-    Buffer.from(await asset.arrayBuffer()),
-  );
-  const heroResponse = await fetch(game.header_image, {
+  // Import game artwork, never screenshots of the reference website UI.
+  const asset = await fetch(game.header_image, {
     signal: AbortSignal.timeout(30000),
   });
-  if (heroResponse.ok)
-    await writeFile(
-      `public/images/${slug}-hero.jpg`,
-      Buffer.from(await heroResponse.arrayBuffer()),
-    );
+  if (!asset.ok) throw new Error(`Image request failed for ${slug}`);
+  const artwork = Buffer.from(await asset.arrayBuffer());
+  await writeFile(`public/images/${slug}.jpg`, artwork);
+  await writeFile(`public/images/${slug}-hero.jpg`, artwork);
   const rawDate = Date.parse(`${game.release_date?.date ?? ""} UTC`);
   const release = Number.isFinite(rawDate)
     ? new Date(rawDate).toISOString().slice(0, 10)
@@ -163,7 +148,7 @@ for (const [index, [slug, appid, platforms, genres]] of titles.entries()) {
     release,
     game.developers?.join(", ") ?? "",
     game.publishers?.join(", ") ?? "",
-    `/images/${slug}.jpg`,
+    `/images/${slug}-hero.jpg`,
     `/images/${slug}-hero.jpg`,
   ].map(q);
   inserts.push(

@@ -17,6 +17,7 @@ Verified on 2026-10-30.
 - Production Firebase configuration responds successfully: email/password and Google are enabled, the website hostname is authorized, and the live application uses the real project with no emulator.
 - The production Google Cloud billing API confirms `billingEnabled: false`.
 - Starter release dates were checked and corrected to parse calendar dates in UTC, independent of the developer machine's time zone.
+- Published artwork was visually inspected for legacy website branding. All 14 games and 28 deployed artwork URLs were checked against the clean local assets; the catalog importer now uses only game artwork.
 
 ## Tested behavior
 
