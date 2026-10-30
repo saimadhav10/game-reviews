@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saint Regus - Missing Games Audit Modal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#eeeeee",
+            "on-primary-fixed-variant": "#504700",
+            "on-error": "#ffffff",
+            "outline-variant": "#cdc7aa",
+            "secondary-fixed": "#e5e2e1",
+            "on-surface": "#1a1c1c",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-container-highest": "#e2e2e2",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#3e0400",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f0f1f1",
+            "inverse-surface": "#2f3131",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary-container": "#c72000",
+            "tertiary-container": "#ffddd6",
+            "on-background": "#1a1c1c",
+            "background": "#f9f9f9",
+            "on-surface-variant": "#4b4731",
+            "surface-tint": "#6a5f00",
+            "primary": "#6a5f00",
+            "on-tertiary-fixed-variant": "#8e1400",
+            "secondary-container": "#e5e2e1",
+            "surface-container-high": "#e8e8e8",
+            "tertiary-fixed": "#ffdad3",
+            "on-secondary-fixed-variant": "#474646",
+            "primary-container": "#ffe600",
+            "outline": "#7c775f",
+            "primary-fixed": "#fde400",
+            "surface": "#f9f9f9",
+            "on-primary-fixed": "#201c00",
+            "on-primary-container": "#726600",
+            "surface-container-low": "#f3f3f4",
+            "tertiary": "#b91e00",
+            "on-secondary-container": "#656464",
+            "tertiary-fixed-dim": "#ffb4a5",
+            "secondary": "#5f5e5e",
+            "surface-bright": "#f9f9f9",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#dec800",
+            "primary-fixed-dim": "#dec800",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#1c1b1b",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-dim": "#dadada"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "gutter-desktop": "2rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.25rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Anton"],
+            "headline-lg-mobile": ["Anton"],
+            "title-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "headline-xl": ["Anton"],
+            "label-lg": ["Anton"],
+            "headline-xl-mobile": ["Anton"],
+            "title-md": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "body-md": ["Space Grotesk"],
+            "body-sm": ["Space Grotesk"],
+            "body-lg": ["Space Grotesk"],
+            "headline-sm": ["Anton"],
+            "headline-md": ["Anton"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "title-lg": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .comic-border {
+      border: 2.5px solid #1a1c1c;
+    }
+    .comic-border-thick {
+      border: 3px solid #1a1c1c;
+    }
+    .comic-shadow-sm {
+      box-shadow: 2px 2px 0px #1a1c1c;
+    }
+    .comic-shadow {
+      box-shadow: 4px 4px 0px #1a1c1c;
+    }
+    .comic-shadow-lg {
+      box-shadow: 6px 6px 0px #1a1c1c;
+    }
+    .comic-shadow-yellow {
+      box-shadow: 3px 3px 0px #ffe600;
+    }
+    .hazard-stripe {
+      background: repeating-linear-gradient(
+        -45deg,
+        #1a1c1c,
+        #1a1c1c 8px,
+        #ffe600 8px,
+        #ffe600 16px
+      );
+    }
+    /* Hide scrollbars for crisp brutalist aesthetic */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-high text-on-surface antialiased min-h-screen flex justify-center items-start p-0 sm:p-4 select-none">
+<!-- Mobile Canvas Frame (390px simulated smartphone container) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface-container-low flex flex-col relative comic-border-thick shadow-[8px_8px_0px_#1a1c1c] overflow-hidden my-auto">
+<!-- TOP APP BAR -->
+<header class="w-full bg-surface-container-lowest z-20 comic-border-thick border-t-0 border-l-0 border-r-0 px-3 py-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary-container comic-border flex items-center justify-center font-headline-sm text-headline-sm text-on-surface">
+          R
+        </div>
+<div>
+<span class="font-headline-sm text-headline-sm tracking-wider uppercase text-on-surface leading-none block">SAINT REGUS</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full animate-ping"></span>
+            LIVE AUDIT DESK // #09
+          </span>
+</div>
+</div>
+<!-- Top Action Badges -->
+<div class="flex items-center gap-1.5">
+<div class="bg-primary-container px-2 py-0.5 comic-border text-on-surface font-label-sm text-label-sm uppercase font-bold flex items-center gap-1 shadow-[1.5px_1.5px_0px_#1a1c1c]">
+<span class="material-symbols-outlined text-[13px]" data-icon="shield_person">shield_person</span>
+<span>SR-VERIFIED</span>
+</div>
+<button class="w-7 h-7 bg-surface-container-lowest comic-border flex items-center justify-center hover:bg-primary-container transition-colors shadow-[1.5px_1.5px_0px_#1a1c1c]" title="Notifications">
+<span class="material-symbols-outlined text-[16px]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- INACTIVE / BACKGROUND ARCHIVE CANVAS (Peeking Context) -->
+<div class="w-full px-3 py-2.5 opacity-40 pointer-events-none select-none filter blur-[0.5px]">
+<div class="flex justify-between items-center mb-2">
+<span class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">VAULT BACKLOG [QUEUE: 8]</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.5 uppercase">PRIORITY 1</span>
+</div>
+<div class="bg-surface-container-lowest comic-border p-2 mb-2">
+<div class="flex justify-between font-label-sm text-label-sm font-bold uppercase mb-1">
+<span class="text-tertiary">#088 DISAMBIGUATED</span>
+<span>SEGA SATURN</span>
+</div>
+<p class="font-headline-sm text-headline-sm uppercase leading-none">LUNAR: SILVER STAR STORY COMPLETE</p>
+</div>
+</div>
+<!-- MODAL OVERLAY BACKDROP -->
+<div class="absolute inset-0 bg-on-surface/40 backdrop-blur-[2px] z-30 pointer-events-none"></div>
+<!-- ACTIVE BOTTOM SHEET / FLOATING AUDIT MODAL -->
+<div class="relative z-40 mt-auto flex flex-col w-full max-h-[777px] bg-surface-container-lowest comic-border-thick border-b-0 shadow-[0px_-6px_0px_#1a1c1c]">
+<!-- Modal Drag Strip & Quick Category -->
+<div class="w-full bg-primary-container border-b-[2.5px] border-on-surface px-3 py-1 flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="warning">warning</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-widest text-on-surface">MISSING SKU TRIAGE PROTOCOL</span>
+</div>
+<span class="bg-on-surface text-primary-container font-label-sm text-label-sm px-1.5 py-0.2 font-bold tracking-wider">NODE #089</span>
+</div>
+<!-- Modal Header Bar -->
+<div class="p-3 border-b-[2.5px] border-on-surface flex justify-between items-start bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="bg-tertiary text-on-tertiary px-1.5 py-0.5 font-label-sm text-label-sm font-bold uppercase">UNINDEXED</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">INGESTION RUNNER</span>
+</div>
+<h1 class="font-headline-md text-headline-md uppercase leading-tight text-on-surface tracking-wide">
+            SUBMIT MISSING TITLE // AUDIT NODE
+          </h1>
+</div>
+<button class="w-8 h-8 bg-surface-container-lowest comic-border flex items-center justify-center font-headline-sm text-headline-sm hover:bg-tertiary hover:text-on-tertiary transition-colors comic-shadow-sm flex-shrink-0 ml-2" title="Close Modal">
+          ✕
+        </button>
+</div>
+<!-- DUAL-TAB SEGMENTED CONTROLS -->
+<div class="grid grid-cols-2 border-b-[2.5px] border-on-surface bg-surface-container">
+<button class="py-2 px-1 text-center font-label-md text-label-md uppercase font-bold text-secondary hover:text-on-surface border-r-[2px] border-on-surface flex items-center justify-center gap-1 bg-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]" data-icon="person_edit">person_edit</span>
+          USER SUBMISSION
+        </button>
+<button class="py-2 px-1 text-center font-label-md text-label-md uppercase font-bold bg-primary-container text-on-surface flex items-center justify-center gap-1.5 relative shadow-inner">
+<span class="material-symbols-outlined text-[15px]" data-icon="fact_check">fact_check</span>
+          AUDITOR TRIAGE CARD
+          <span class="w-2 h-2 bg-tertiary rounded-full animate-pulse"></span>
+</button>
+</div>
+<!-- SCROLLABLE AUDIT CARD CONTENT -->
+<div class="p-3 overflow-y-auto no-scrollbar space-y-3.5 pb-24 text-on-surface">
+<!-- SUBMITTER METADATA BANNER -->
+<div class="comic-border p-2 bg-surface-container-low flex items-center justify-between comic-shadow-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-on-surface text-primary-container comic-border flex items-center justify-center font-headline-sm text-headline-sm">
+              ND
+            </div>
+<div>
+<p class="font-label-md text-label-md uppercase font-bold leading-none">NeonDrifter</p>
+<p class="font-body-sm text-body-sm text-secondary leading-tight mt-0.5">Trust Rank 4 // 142 Verified Ratings</p>
+</div>
+</div>
+<span class="bg-primary-container border-[1.5px] border-on-surface px-1.5 py-0.5 font-label-sm text-label-sm font-bold uppercase tracking-wider">
+            +15 PTS PENDING
+          </span>
+</div>
+<!-- SECTION: GAME TITLE & ALIAS SPEC -->
+<div class="comic-border bg-surface-container-lowest p-2.5 comic-shadow-sm">
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-sm text-label-sm uppercase font-bold text-secondary">PRIMARY CANON TITLE</label>
+<span class="font-label-sm text-label-sm bg-on-surface text-surface-container-lowest px-1 uppercase">FIELD LOCKED</span>
+</div>
+<div class="bg-surface-container-lowest comic-border p-2 mb-1.5 focus-within:ring-2 focus-within:ring-primary-container">
+<h2 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wide leading-none">
+              KOWLOON HIGHSCHOOL CHRONICLE
+            </h2>
+<div class="mt-1 flex items-center gap-2 text-secondary font-body-sm text-body-sm border-t border-surface-container-highest pt-1">
+<span class="font-bold text-on-surface">ORIGINAL JP:</span>
+<span class="font-medium text-on-surface">九龍妖魔學園紀 ORIGIN OF ADVENTURE</span>
+</div>
+</div>
+<!-- PLATFORM SELECTOR CHIPS -->
+<div class="mt-2">
+<label class="font-label-sm text-label-sm uppercase font-bold text-secondary block mb-1">TARGET PLATFORM (VERIFIED SKU)</label>
+<div class="grid grid-cols-2 gap-1.5">
+<div class="comic-border bg-primary-container p-1.5 flex items-center justify-between comic-shadow-sm">
+<span class="font-label-sm text-label-sm font-bold uppercase">Nintendo Switch</span>
+<span class="material-symbols-outlined text-[16px] font-bold" data-icon="check_circle">check_circle</span>
+</div>
+<div class="comic-border bg-surface-container-lowest p-1.5 flex items-center justify-between opacity-70">
+<span class="font-label-sm text-label-sm font-bold uppercase">PC / Steam</span>
+<span class="text-[10px] font-bold text-secondary">UNCHECKED</span>
+</div>
+<div class="comic-border bg-surface-container-lowest p-1.5 flex items-center justify-between opacity-70">
+<span class="font-label-sm text-label-sm font-bold uppercase">PlayStation 4</span>
+<span class="text-[10px] font-bold text-secondary">UNCHECKED</span>
+</div>
+<div class="comic-border bg-surface-container-lowest p-1.5 flex items-center justify-between opacity-70">
+<span class="font-label-sm text-label-sm font-bold uppercase">Retro PS2 (2004)</span>
+<span class="text-[10px] font-bold text-secondary">PARENT SKU</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: METADATA & REPUTABLE RELEASE RECORD -->
+<div class="grid grid-cols-2 gap-2">
+<!-- Release Year & Region -->
+<div class="comic-border bg-surface-container-lowest p-2 comic-shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-0.5">RELEASE / YEAR</span>
+<p class="font-title-md text-title-md font-bold text-on-surface">2004 / 2020</p>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">NTSC-J &amp; Global Remaster</span>
+</div>
+<!-- Publisher / Studio -->
+<div class="comic-border bg-surface-container-lowest p-2 comic-shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-0.5">PUBLISHER / DEV</span>
+<p class="font-title-md text-title-md font-bold text-on-surface truncate">Arc System Works</p>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Shout! Designworks</span>
+</div>
+</div>
+<!-- DIGITAL STOREFRONT / BARCODE VERIFICATION BAR -->
+<div class="comic-border bg-surface-container-lowest p-2.5 comic-shadow-sm">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm font-bold uppercase text-secondary">API DIGITAL STOREFRONT INGESTION</span>
+<span class="bg-[#008f39] text-surface-container-lowest font-label-sm text-label-sm font-bold px-1.5 py-0.5 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="verified">verified</span>
+              MATCH CONFIRMED
+            </span>
+</div>
+<div class="bg-surface-container-low p-1.5 font-mono text-[11px] border border-on-surface flex justify-between items-center text-on-surface font-semibold">
+<span class="truncate">ESHOP-JP-40291 // 4510772200057</span>
+<button class="text-tertiary underline text-[10px] ml-2 flex-shrink-0 font-bold">INSPECT</button>
+</div>
+</div>
+<!-- DISAMBIGUATION & CANON RESOLVER (CORE JOURNALISM PROTOCOL) -->
+<div class="comic-border bg-surface-container-lowest p-2.5 comic-shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-primary-container comic-border"></span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">SKU CANON &amp; DISAMBIGUATION RESOLVER</span>
+</div>
+<span class="text-tertiary font-label-sm text-label-sm font-bold uppercase">CRITICAL</span>
+</div>
+<!-- Radio 1: Selected Standalone Node -->
+<div class="comic-border-thick bg-primary-container p-2.5 mb-2 comic-shadow-sm flex items-start gap-2.5">
+<div class="w-4 h-4 bg-on-surface comic-border flex items-center justify-center mt-0.5 flex-shrink-0">
+<div class="w-1.5 h-1.5 bg-primary-container"></div>
+</div>
+<div>
+<p class="font-label-md text-label-md uppercase font-bold text-on-surface leading-tight">
+                STANDALONE INDEX NODE
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+                Establish new standalone review vault, distinct score aggregation, and remastered assets partition.
+              </p>
+</div>
+</div>
+<!-- Radio 2: Canonical Variant -->
+<div class="comic-border bg-surface-container-lowest p-2.5 opacity-80 flex items-start gap-2.5 hover:opacity-100 transition-opacity">
+<div class="w-4 h-4 bg-surface-container-lowest comic-border flex items-center justify-center mt-0.5 flex-shrink-0"></div>
+<div>
+<p class="font-label-md text-label-md uppercase font-bold text-secondary leading-tight">
+                CANONICAL EXPANSION / SUB-NODE
+              </p>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5 leading-snug">
+                Nest under existing 2004 PS2 parent node as an enhanced SKU reissue.
+              </p>
+</div>
+</div>
+</div>
+<!-- COMMUNITY SUBMISSION PROOF / AUDITOR NOTES -->
+<div class="comic-border bg-surface-container-lowest p-2.5 comic-shadow-sm">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">SUBMITTER EDITORIAL PROOF</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">NOTE #1 OF 1</span>
+</div>
+<blockquote class="bg-surface-container-low p-2 border-l-[3px] border-on-surface font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            "Original 2004 PS2 classic re-released with English voice track and re-recorded orchestral score in 2020. Not a straight port, features revised battle rebalance and full comic visual novel staging."
+          </blockquote>
+</div>
+<!-- AUDIT POLICY NOTICE -->
+<div class="p-2 bg-surface-container-high comic-border flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]" data-icon="policy">policy</span>
+<p class="font-body-sm text-body-sm leading-tight text-secondary">
+            Automated ping will notify submitter <strong class="text-on-surface">NeonDrifter</strong> and allocate <strong class="text-on-surface">+15 Rep</strong> upon audit approval.
+          </p>
+</div>
+</div>
+<!-- DOCKED AUDITOR ACTION MATRIX (THUMB-FRIENDLY BOTTOM BAR) -->
+<div class="absolute bottom-0 inset-x-0 bg-surface-container-lowest border-t-[2.5px] border-on-surface p-2.5 z-50 shadow-[0px_-4px_0px_#1a1c1c] space-y-1.5">
+<!-- Primary Approve Button -->
+<button class="w-full bg-primary-container comic-border-thick py-2.5 px-3 flex items-center justify-center gap-2 font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider comic-shadow active:translate-x-0.5 active:translate-y-0.5 transition-all hover:bg-[#fff04d]">
+<span class="material-symbols-outlined text-[20px]" data-icon="task_alt">task_alt</span>
+          VALIDATE &amp; INDEX TO VAULT (APPROVE)
+        </button>
+<!-- Secondary Decision Actions -->
+<div class="grid grid-cols-2 gap-1.5">
+<button class="bg-surface-container-lowest comic-border py-1.5 px-2 font-label-md text-label-md uppercase font-bold text-on-surface flex items-center justify-center gap-1 hover:bg-surface-container active:translate-x-0.5 active:translate-y-0.5 transition-all shadow-[2px_2px_0px_#1a1c1c]">
+<span class="material-symbols-outlined text-[15px]" data-icon="link">link</span>
+            MERGE / LINK SKU
+          </button>
+<button class="bg-surface-container-lowest comic-border py-1.5 px-2 font-label-md text-label-md uppercase font-bold text-tertiary flex items-center justify-center gap-1 hover:bg-error-container active:translate-x-0.5 active:translate-y-0.5 transition-all shadow-[2px_2px_0px_#1a1c1c]">
+<span class="material-symbols-outlined text-[15px]" data-icon="cancel">cancel</span>
+            REJECT // DUPE
+          </button>
+</div>
+</div>
+</div>
+<!-- TRIAGE BOTTOM CONTROL SHELL (Persistent Base Navigation) -->
+<nav class="w-full bg-surface-container-lowest border-t-[2.5px] border-on-surface px-2 py-1.5 flex justify-between items-center text-center z-10">
+<div class="flex-1 py-1 font-headline-sm text-headline-sm text-secondary hover:text-on-surface">
+        TRIAGE (14)
+      </div>
+<div class="flex-1 py-1 bg-primary-container comic-border font-headline-sm text-headline-sm text-on-surface shadow-[1.5px_1.5px_0px_#1a1c1c]">
+        MISSING (8)
+      </div>
+<div class="flex-1 py-1 font-headline-sm text-headline-sm text-secondary hover:text-on-surface">
+        RULES
+      </div>
+<div class="flex-1 py-1 font-headline-sm text-headline-sm text-secondary hover:text-on-surface">
+        LOCKDOWN
+      </div>
+</nav>
+</div>
+</body></html>

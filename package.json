@@ -1,0 +1,47 @@
+{
+  "name": "gamereviews",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n web,api,auth \"npm:dev:web\" \"npm:dev:api\" \"npm:dev:auth\"",
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:api": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "dev:auth": "firebase emulators:start --only auth --project demo-gamereviews",
+    "setup:local": "node scripts/setup-local.mjs",
+    "setup:admin-local": "node scripts/setup-local-admin.mjs",
+    "db:migrate": "wrangler d1 migrations apply gamereviews --local",
+    "db:seed": "wrangler d1 execute gamereviews --local --file db/seed.sql",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "test": "firebase emulators:exec --only auth --project demo-gamereviews-tests --config firebase.test.json \"vitest run\"",
+    "deploy:check": "node scripts/check-deploy.mjs",
+    "deploy": "npm run deploy:check && npm run build && wrangler deploy",
+    "format": "prettier --write src worker shared tests scripts *.json *.jsonc *.ts *.html"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "firebase": "13.1.0",
+    "hono": "4.13.14",
+    "lucide-react": "1.64.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261030.1",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "concurrently": "10.0.6",
+    "firebase-tools": "15.34.2",
+    "miniflare": "5.20261023.3-beta",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5",
+    "wrangler": "4.156.0"
+  }
+}

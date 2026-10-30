@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAINT REGUS // Community Top 50 Leaderboard</title>
+<!-- Material Symbols Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Anton & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#656464",
+            "on-tertiary-container": "#c72000",
+            "inverse-on-surface": "#f0f1f1",
+            "secondary-container": "#e5e2e1",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#c8c6c5",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#726600",
+            "surface-container-highest": "#e2e2e2",
+            "primary-fixed": "#fde400",
+            "secondary-fixed": "#e5e2e1",
+            "on-primary-fixed": "#201c00",
+            "primary-fixed-dim": "#dec800",
+            "primary-container": "#ffe600",
+            "on-tertiary-fixed": "#3e0400",
+            "on-error-container": "#93000a",
+            "on-background": "#1a1c1c",
+            "outline": "#7c775f",
+            "surface-dim": "#dadada",
+            "surface-bright": "#f9f9f9",
+            "inverse-primary": "#dec800",
+            "surface-container": "#eeeeee",
+            "tertiary": "#b91e00",
+            "surface-tint": "#6a5f00",
+            "on-primary-fixed-variant": "#504700",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#ffddd6",
+            "primary": "#6a5f00",
+            "on-error": "#ffffff",
+            "surface": "#f9f9f9",
+            "tertiary-fixed": "#ffdad3",
+            "on-secondary-fixed-variant": "#474646",
+            "on-surface-variant": "#4b4731",
+            "inverse-surface": "#2f3131",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "outline-variant": "#cdc7aa",
+            "surface-variant": "#e2e2e2",
+            "background": "#f9f9f9",
+            "on-tertiary-fixed-variant": "#8e1400",
+            "secondary": "#5f5e5e",
+            "on-surface": "#1a1c1c",
+            "on-secondary-fixed": "#1c1b1b",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#f3f3f4",
+            "tertiary-fixed-dim": "#ffb4a5",
+            "surface-container-high": "#e8e8e8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "2rem",
+            "margin-desktop": "3rem",
+            "gutter": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "title-md": ["Space Grotesk"],
+            "body-lg": ["Space Grotesk"],
+            "body-md": ["Space Grotesk"],
+            "headline-xl": ["Anton"],
+            "headline-lg-mobile": ["Anton"],
+            "headline-xl-mobile": ["Anton"],
+            "label-lg": ["Anton"],
+            "headline-md": ["Anton"],
+            "headline-lg": ["Anton"],
+            "label-md": ["Space Grotesk"],
+            "headline-sm": ["Anton"],
+            "body-sm": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "title-lg": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-sm": ["24px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "title-lg": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-36 font-body-md select-none">
+<!-- TOP APP BAR (MOBILE ORIENTED NEO-BRUTALIST SHELL) -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest border-b-[3px] border-on-surface shadow-[0px_4px_0px_#1a1c1c]">
+<div class="px-3 py-2 flex items-center justify-between gap-2 max-w-md mx-auto">
+<!-- Brand & Mobile Identity Badge -->
+<div class="flex items-center gap-1.5">
+<div class="bg-on-surface text-primary-container px-2 py-0.5 border-2 border-on-surface">
+<span class="font-headline-sm text-headline-sm uppercase tracking-wider">SR</span>
+</div>
+<div>
+<a class="font-headline-md text-headline-md tracking-tight uppercase leading-none block text-on-surface" href="#">
+            SAINT REGUS
+          </a>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary block font-bold">
+            RAW &amp; UNFILTERED GAMING
+          </span>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-1.5">
+<button aria-label="Search Games" class="w-9 h-9 flex items-center justify-center bg-surface border-2 border-on-surface shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5 transition-transform">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+<button aria-label="Notifications" class="w-9 h-9 flex items-center justify-center bg-primary-container border-2 border-on-surface shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5 transition-transform">
+<span class="material-symbols-outlined text-on-surface" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+<div class="w-9 h-9 bg-on-surface text-surface-container-lowest border-2 border-on-surface flex items-center justify-center relative shadow-[2px_2px_0px_#1a1c1c]">
+<span class="material-symbols-outlined text-sm">shield_person</span>
+<span class="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-primary-container border border-on-surface"></span>
+</div>
+</div>
+</div>
+<!-- Live Telemetry Sub-Strip -->
+<div class="bg-primary-container border-t-2 border-on-surface px-3 py-1 text-on-surface flex items-center justify-between overflow-x-hidden">
+<div class="flex items-center gap-1.5 whitespace-nowrap">
+<span class="w-2 h-2 bg-tertiary animate-pulse border border-on-surface"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">CYCLE #42 • 14,890 VERIFIED BALLOTS SYNCED</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-on-surface text-surface-container-lowest px-1.5 py-0.2">LIVE METRIC</span>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-md mx-auto px-3 pt-3 space-y-4">
+<!-- PAGE HERO HEADER / LEADERBOARD CALLOUT -->
+<section class="bg-surface-container-lowest border-[2.5px] border-on-surface shadow-[4px_4px_0px_#1a1c1c] p-3 relative overflow-hidden">
+<!-- Background Graphic Accents -->
+<div class="absolute -right-4 -bottom-6 opacity-10 select-none pointer-events-none">
+<span class="font-headline-xl text-headline-xl uppercase text-on-surface">TOP 50</span>
+</div>
+<div class="flex items-start justify-between gap-2 mb-1">
+<div class="inline-block bg-tertiary text-on-tertiary px-2 py-0.5 font-label-md text-label-md uppercase tracking-widest border border-on-surface">
+          COMMUNITY BALLOT 2025
+        </div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">
+          UPDATED 4M AGO
+        </div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface tracking-tight leading-none mt-1">
+        THE COMMUNITY <span class="bg-primary-container px-1 text-on-surface">TOP 50</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+        Ranked purely by verified human gamers with linked platform libraries. No PR kickbacks, zero paid placements, algorithmic anti-brigading active.
+      </p>
+<!-- Integrity Verification Badge -->
+<div class="mt-3 pt-2 border-t-2 border-dashed border-on-surface flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+<span class="font-label-sm text-label-sm uppercase">DECIMAL ANTI-RAID SYSTEM: ARMED</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-tertiary">100% TRANSPARENT</span>
+</div>
+</section>
+<!-- LEADERBOARD SCOPE & FILTER SWITCHERS -->
+<section class="space-y-2">
+<!-- Scope Tabs (Horizontal Scrollable) -->
+<div class="flex gap-1.5 overflow-x-auto pb-1 text-nowrap scrollbar-none">
+<button class="bg-primary-container text-on-surface border-2 border-on-surface px-3 py-1 font-headline-sm text-headline-sm uppercase shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5">
+          ALL-TIME CANON
+        </button>
+<button class="bg-surface-container-lowest text-on-surface border-2 border-on-surface px-3 py-1 font-headline-sm text-headline-sm uppercase hover:bg-primary-fixed shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5">
+          2024–2025 RELEASES
+        </button>
+<button class="bg-surface-container-lowest text-on-surface border-2 border-on-surface px-3 py-1 font-headline-sm text-headline-sm uppercase hover:bg-primary-fixed shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5">
+          RETRO VAULT
+        </button>
+<button class="bg-surface-container-lowest text-on-surface border-2 border-on-surface px-3 py-1 font-headline-sm text-headline-sm uppercase hover:bg-primary-fixed shadow-[2px_2px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5">
+          INDIE GEMS
+        </button>
+</div>
+<!-- Platform Filter Pills -->
+<div class="flex items-center gap-1 overflow-x-auto pb-0.5 text-nowrap">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant mr-1 font-bold">PLATFORMS:</span>
+<button class="bg-on-surface text-surface-container-lowest px-2 py-0.5 text-xs font-label-md uppercase border border-on-surface font-bold">
+          ALL
+        </button>
+<button class="bg-surface-container-lowest text-on-surface px-2 py-0.5 text-xs font-label-md uppercase border border-on-surface hover:bg-surface-container-highest">
+          PC/STEAM
+        </button>
+<button class="bg-surface-container-lowest text-on-surface px-2 py-0.5 text-xs font-label-md uppercase border border-on-surface hover:bg-surface-container-highest">
+          PS5
+        </button>
+<button class="bg-surface-container-lowest text-on-surface px-2 py-0.5 text-xs font-label-md uppercase border border-on-surface hover:bg-surface-container-highest">
+          SWITCH
+        </button>
+<button class="bg-surface-container-lowest text-on-surface px-2 py-0.5 text-xs font-label-md uppercase border border-on-surface hover:bg-surface-container-highest">
+          XBOX
+        </button>
+</div>
+</section>
+<!-- SECTION TITLE: THE PODIUM -->
+<div class="flex items-center justify-between border-b-2 border-on-surface pb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-tertiary border border-on-surface"></span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wide">THE PODIUM // TOP 3</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">BALLOT WEIGHT: 100%</span>
+</div>
+<!-- RANK #01 HERO PODIUM CARD -->
+<article class="bg-surface-container-lowest border-[2.5px] border-on-surface shadow-[4px_4px_0px_#1a1c1c] overflow-hidden">
+<!-- Card Banner Strip -->
+<div class="bg-primary-container border-b-[2.5px] border-on-surface p-2 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="bg-on-surface text-primary-container px-2 py-0.5 font-headline-sm text-headline-sm uppercase">#01</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">VERIFIED LEADER</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest px-1.5 py-0.5 border border-on-surface">
+<span class="material-symbols-outlined text-xs text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_drop_up</span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">+1 THIS MONTH</span>
+</div>
+</div>
+<!-- Comic Split Header: Game Image & Huge Rating Panel -->
+<div class="grid grid-cols-12 border-b-[2.5px] border-on-surface">
+<div class="col-span-7 relative h-36 border-r-[2.5px] border-on-surface overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Intense neo-brutalist Japanese fantasy role playing game artwork showing a stylized protagonist holding an archaic ornate blade against a high-contrast canary yellow and ink black sky. Sharp comic line art, dynamic shadows, and graphic novel screentone details convey urgent momentum and epic atmosphere in vivid light aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzjZ0JgVx5m-CixAILoo7NaQS77Z0hvCPI4nKvBq0qv4ekqj5tBW0mYAcK31MhHW5wjLHnYW4HsL7IUrmHDjqlHmMjSouSpgnIrsNMMUwB9NVeK0AA9ybfypXp8FtW6nHkIzeXOPnF36Imqy6b9WL9cHXCb0limfaupOcKYwxsgFsyzwrD9WK0EzizJoiL8KiUUh67VwUXD4FiVm8qXvdRnIXY19ZAnwNwlluvT80"/>
+<div class="absolute bottom-1 left-1 bg-on-surface text-surface-container-lowest px-1.5 py-0.5 font-label-sm text-label-sm uppercase">
+            STUDIO ZERO / ATLUS
+          </div>
+</div>
+<div class="col-span-5 bg-primary-container p-2 flex flex-col justify-between items-center text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface font-bold">COMMUNITY SCORE</span>
+<div class="font-headline-xl text-headline-xl text-on-surface leading-none tracking-tighter">
+            9.8
+          </div>
+<div class="bg-on-surface text-surface-container-lowest px-1.5 py-0.5 font-label-sm text-label-sm uppercase w-full">
+            ESSENTIAL CANON
+          </div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="p-3 space-y-2">
+<div>
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface leading-tight tracking-tight">
+            METAPHOR: REFANTAZIO
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">
+            Turn-Based RPG • Director: Katsura Hashino • PS5 / PC / Xbox Series
+          </p>
+</div>
+<!-- Telemetry Data Strip -->
+<div class="bg-surface-container border border-on-surface p-2 space-y-1">
+<div class="flex justify-between items-center text-xs font-label-md">
+<span class="uppercase text-on-surface-variant font-bold">VALIDATED BALLOTS:</span>
+<span class="font-bold text-on-surface">2,840 PLAYERS (100% STEAM/PSN SYNC)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 border border-on-surface overflow-hidden">
+<div class="bg-tertiary h-full w-[98%]"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-label-sm text-on-surface-variant">
+<span>SPONSORED REVIEWS: 0.0%</span>
+<span>CRITIC ALIGNMENT: 98.4%</span>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full bg-primary-container text-on-surface border-2 border-on-surface py-2 px-3 font-headline-sm text-headline-sm uppercase shadow-[3px_3px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5 flex items-center justify-center gap-1.5">
+<span>VIEW BALLOT BREAKDOWN &amp; QUOTES</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- RANK #02 PODIUM CARD -->
+<article class="bg-surface-container-lowest border-[2.5px] border-on-surface shadow-[4px_4px_0px_#1a1c1c]">
+<div class="p-2.5 flex items-start justify-between gap-3 border-b-[2.5px] border-on-surface">
+<div class="flex items-start gap-2.5">
+<div class="bg-surface-container text-on-surface font-headline-md text-headline-md px-2 py-0.5 border-2 border-on-surface leading-none">
+            #02
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<span class="bg-on-surface text-surface-container-lowest text-[10px] font-label-sm uppercase px-1">FROMSOFTWARE</span>
+<span class="text-tertiary font-label-sm text-label-sm uppercase font-bold">ACTION RPG</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight mt-0.5">
+              ELDEN RING: SHADOW OF THE ERDTREE
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              4,120 Verified Ballots • PC, PS5, Xbox Series
+            </p>
+</div>
+</div>
+<!-- Score Badge -->
+<div class="bg-surface-container-low border-2 border-on-surface p-1.5 text-center min-w-[58px]">
+<span class="font-headline-sm text-headline-sm block leading-none text-on-surface">9.7</span>
+<span class="font-label-sm text-label-sm uppercase block text-on-surface-variant">/ 10</span>
+</div>
+</div>
+<div class="px-3 py-1.5 bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm uppercase">
+<div class="flex items-center gap-1 text-tertiary font-bold">
+<span class="material-symbols-outlined text-xs">arrow_drop_down</span>
+<span>-1 THIS CYCLE (PEAK #1 FOR 4 MONTHS)</span>
+</div>
+<a class="underline text-on-surface font-bold hover:text-tertiary" href="#">DETAILS ›</a>
+</div>
+</article>
+<!-- RANK #03 PODIUM CARD -->
+<article class="bg-surface-container-lowest border-[2.5px] border-on-surface shadow-[4px_4px_0px_#1a1c1c]">
+<div class="p-2.5 flex items-start justify-between gap-3 border-b-[2.5px] border-on-surface">
+<div class="flex items-start gap-2.5">
+<div class="bg-primary-container text-on-surface font-headline-md text-headline-md px-2 py-0.5 border-2 border-on-surface leading-none">
+            #03
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<span class="bg-tertiary text-surface-container-lowest text-[10px] font-label-sm uppercase px-1">INDIE PHENOM</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">LOCAL THUNK</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight mt-0.5">
+              BALATRO
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              3,450 Verified Ballots • Roguelike Poker Deckbuilder
+            </p>
+</div>
+</div>
+<!-- Score Badge -->
+<div class="bg-primary-container border-2 border-on-surface p-1.5 text-center min-w-[58px]">
+<span class="font-headline-sm text-headline-sm block leading-none text-on-surface">9.6</span>
+<span class="font-label-sm text-label-sm uppercase block text-on-surface font-bold">MASTER</span>
+</div>
+</div>
+<div class="px-3 py-1.5 bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm uppercase">
+<div class="flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-xs">arrow_drop_up</span>
+<span>▲ +4 BIGGEST CLIMBER</span>
+</div>
+<a class="underline text-on-surface font-bold hover:text-tertiary" href="#">DETAILS ›</a>
+</div>
+</article>
+<!-- SECTION TITLE: THE EXTENDED 50 -->
+<div class="flex items-center justify-between border-b-2 border-on-surface pt-2 pb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-on-surface"></span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wide">LEADERBOARD // #04 TO #10</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-bold">PAGINATED: 1 - 10 OF 50</span>
+</div>
+<!-- COMPACT MOBILE LIST ENTRIES (#04 TO #10) -->
+<div class="space-y-2">
+<!-- ITEM #04 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            04
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">SILENT HILL 2 (REMAKE)</h4>
+<span class="font-label-sm text-[10px] text-primary font-bold">▲ +2</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Bloober Team / Konami • 1,940 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.5
+          </div>
+</div>
+</div>
+<!-- ITEM #05 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            05
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">ASTRO BOT</h4>
+<span class="font-label-sm text-[10px] text-on-secondary-container font-bold">— STABLE</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Team ASOBI / Sony • 3,110 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-primary-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.5
+          </div>
+</div>
+</div>
+<!-- ITEM #06 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            06
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">FINAL FANTASY VII REBIRTH</h4>
+<span class="font-label-sm text-[10px] text-tertiary font-bold">▼ -2</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Square Enix • 3,890 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.4
+          </div>
+</div>
+</div>
+<!-- ITEM #07 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            07
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">LIKE A DRAGON: INFINITE WEALTH</h4>
+<span class="font-label-sm text-[10px] text-primary font-bold">▲ +1</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Ryu Ga Gotoku Studio / Sega • 2,210 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.4
+          </div>
+</div>
+</div>
+<!-- ITEM #08 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            08
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">TEKKEN 8</h4>
+<span class="font-label-sm text-[10px] text-tertiary font-bold">▼ -3</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Bandai Namco Studios • 1,780 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.3
+          </div>
+</div>
+</div>
+<!-- ITEM #09 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            09
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">ANIMAL WELL</h4>
+<span class="font-label-sm text-[10px] bg-tertiary text-on-tertiary px-1 font-bold">★ NEW ENTRY</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Shared Memory / Bigmode • 1,620 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.3
+          </div>
+</div>
+</div>
+<!-- ITEM #10 -->
+<div class="bg-surface-container-lowest border-2 border-on-surface shadow-[3px_3px_0px_#1a1c1c] p-2 flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 flex items-center justify-center bg-surface-container border border-on-surface font-headline-sm text-headline-sm text-on-surface">
+            10
+          </div>
+<div>
+<div class="flex items-center gap-1">
+<h4 class="font-headline-sm text-sm uppercase text-on-surface leading-tight">HELLDIVERS 2</h4>
+<span class="font-label-sm text-[10px] text-on-secondary-container font-bold">— STABLE</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Arrowhead Game Studios • 4,520 Ballots</p>
+</div>
+</div>
+<div class="text-right">
+<div class="bg-surface-container border border-on-surface px-1.5 py-0.5 font-headline-sm text-headline-sm leading-none inline-block">
+            9.2
+          </div>
+</div>
+</div>
+</div>
+<!-- PAGINATION BUTTON: LOAD RANKS 11–50 -->
+<button class="w-full bg-surface-container-lowest text-on-surface border-2 border-on-surface py-2 font-headline-sm text-headline-sm uppercase shadow-[3px_3px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5 hover:bg-primary-container transition-colors">
+      LOAD REMAINING 40 ENTRIES (#11–#50)
+    </button>
+<!-- COMMUNITY INTEGRITY & ANTI-RAID CALLOUT BOX -->
+<section class="border-2 border-on-surface bg-surface-container p-3 space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shield</span>
+<h4 class="font-headline-sm text-headline-sm uppercase">THE PROOF-OF-GAMEPLAY MANDATE</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+        Ratings are filtered using platform-API session duration checks. Accounts created under 30 days ago or with fewer than 15 recorded hours in a title cannot vote on its top ballot slot.
+      </p>
+<div class="flex items-center justify-between pt-1 border-t border-on-surface text-xs font-label-md uppercase">
+<span class="text-on-surface-variant">COMMUNITY AUDITOR: BOT_SHIELD_V4</span>
+<span class="text-primary font-bold">STATUS: ZERO ANOMALIES</span>
+</div>
+</section>
+<!-- FOOTER (PREDICTED SHARED FOOTER SIZED FOR MOBILE CANVAS) -->
+<footer class="bg-surface border-t-[3px] border-on-surface pt-6 pb-2 text-center space-y-3">
+<div class="font-headline-md text-headline-md uppercase text-on-surface">
+        SAINT REGUS
+      </div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+        © 2025 SAINT REGUS GAMING JOURNALISM. ALL RIGHTS RESERVED. RAW &amp; UNFILTERED.
+      </p>
+<div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs font-title-md text-on-surface-variant">
+<a class="hover:text-tertiary" href="#">Suggest a Missing Game</a>
+<a class="hover:text-tertiary" href="#">Community Guidelines</a>
+<a class="hover:text-tertiary" href="#">Help Center</a>
+<a class="hover:text-tertiary" href="#">Privacy Policy</a>
+<a class="hover:text-tertiary" href="#">Terms of Service</a>
+</div>
+</footer>
+</main>
+<!-- STICKY BOTTOM BALLOT LAUNCHER BAR (HIGH-CONVERSION MOBILE CTA) -->
+<aside class="fixed bottom-14 left-0 right-0 z-30 px-3 py-1 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<div class="bg-on-surface text-surface-container-lowest border-2 border-on-surface p-2 shadow-[4px_4px_0px_#ffe600] flex items-center justify-between gap-2">
+<div class="leading-tight">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container block font-bold">
+            HAVE YOUR SAY • 3 SLOTS OPEN
+          </span>
+<span class="font-title-md text-xs uppercase text-surface-bright block">
+            CYCLE #42 CLOSES IN 18H
+          </span>
+</div>
+<button class="bg-primary-container text-on-surface border-2 border-primary-container px-3 py-1.5 font-headline-sm text-sm uppercase shadow-[2px_2px_0px_#ffffff] active:translate-x-0.5 active:translate-y-0.5 whitespace-nowrap">
+          LOG BALLOT NOW
+        </button>
+</div>
+</div>
+</aside>
+<!-- MOBILE BOTTOM NAVIGATION BAR (DEDICATED RESPONSIVE MOBILE SHELL) -->
+<nav class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest border-t-[3px] border-on-surface shadow-[0px_-2px_6px_rgba(0,0,0,0.1)]">
+<div class="max-w-md mx-auto grid grid-cols-5 h-14">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center border-r border-on-surface text-on-surface hover:bg-surface-container active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-xl">home</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Home</span>
+</a>
+<!-- Browse Games -->
+<a class="flex flex-col items-center justify-center border-r border-on-surface text-on-surface hover:bg-surface-container active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Browse</span>
+</a>
+<!-- Top 50 (ACTIVE ITEM MATCHING PAGE INTENT) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-surface border-r border-on-surface shadow-inner active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-xl font-bold" data-weight="fill" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Top 50</span>
+</a>
+<!-- Highlights / Reviews -->
+<a class="flex flex-col items-center justify-center border-r border-on-surface text-on-surface hover:bg-surface-container active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-xl">rate_review</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Highlights</span>
+</a>
+<!-- Profile / Anon -->
+<a class="flex flex-col items-center justify-center text-on-surface hover:bg-surface-container active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Anon SR</span>
+</a>
+</div>
+</nav>
+</body></html>

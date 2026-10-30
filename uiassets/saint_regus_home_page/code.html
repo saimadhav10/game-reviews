@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAINT REGUS - Real Gamer Ratings. Zero Sponsored BS.</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Anton & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#cdc7aa",
+            "background": "#f9f9f9",
+            "outline": "#7c775f",
+            "surface-container-low": "#f3f3f4",
+            "surface-tint": "#6a5f00",
+            "on-tertiary-fixed-variant": "#8e1400",
+            "on-secondary-container": "#656464",
+            "on-primary-container": "#726600",
+            "on-secondary-fixed-variant": "#474646",
+            "error": "#ba1a1a",
+            "on-surface": "#1a1c1c",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#ffe600",
+            "on-secondary-fixed": "#1c1b1b",
+            "inverse-surface": "#2f3131",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f0f1f1",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdad3",
+            "tertiary-fixed-dim": "#ffb4a5",
+            "surface-container-high": "#e8e8e8",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#dec800",
+            "on-error": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "on-background": "#1a1c1c",
+            "secondary-fixed": "#e5e2e1",
+            "surface": "#f9f9f9",
+            "on-tertiary-container": "#c72000",
+            "on-primary-fixed-variant": "#504700",
+            "primary-fixed-dim": "#dec800",
+            "surface-dim": "#dadada",
+            "primary": "#6a5f00",
+            "surface-variant": "#e2e2e2",
+            "on-primary-fixed": "#201c00",
+            "tertiary": "#b91e00",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#3e0400",
+            "on-surface-variant": "#4b4731",
+            "secondary": "#5f5e5e",
+            "surface-container": "#eeeeee",
+            "secondary-container": "#e5e2e1",
+            "primary-fixed": "#fde400",
+            "tertiary-container": "#ffddd6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "2rem",
+            "gutter": "1.25rem",
+            "margin-desktop": "3rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Anton"],
+            "headline-xl-mobile": ["Anton"],
+            "headline-md": ["Anton"],
+            "headline-sm": ["Anton"],
+            "body-lg": ["Space Grotesk"],
+            "label-lg": ["Anton"],
+            "label-md": ["Space Grotesk"],
+            "body-sm": ["Space Grotesk"],
+            "title-md": ["Space Grotesk"],
+            "headline-xl": ["Anton"],
+            "label-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Anton"],
+            "body-md": ["Space Grotesk"],
+            "title-lg": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-lg": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .hard-shadow-sm {
+      box-shadow: 2px 2px 0px #1a1c1c;
+    }
+    .hard-shadow {
+      box-shadow: 4px 4px 0px #1a1c1c;
+    }
+    .hard-shadow-lg {
+      box-shadow: 6px 6px 0px #1a1c1c;
+    }
+    .hard-shadow-yellow {
+      box-shadow: 4px 4px 0px #ffe600;
+    }
+    .comic-border {
+      border: 3px solid #1a1c1c;
+    }
+    .comic-border-b {
+      border-bottom: 3px solid #1a1c1c;
+    }
+    .comic-border-t {
+      border-top: 3px solid #1a1c1c;
+    }
+    .comic-border-r {
+      border-right: 3px solid #1a1c1c;
+    }
+    .comic-divider {
+      background-color: #1a1c1c;
+    }
+    /* Speech Bubble Comic Tail */
+    .comic-tail::after {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 14px solid #ffe600;
+    }
+    .comic-tail::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 34px;
+      width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 16px solid #1a1c1c;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-surface">
+<!-- TOP NAVIGATION BAR (Shared Component Source of Truth) -->
+<header class="w-full bg-surface-container-lowest comic-border-b shadow-[0px_4px_0px_#1a1c1c] sticky top-0 z-50">
+<div class="w-full px-6 py-3 flex justify-between items-center max-w-7xl mx-auto">
+<!-- Brand Logo + Search Group -->
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 group" href="#">
+<div class="bg-primary-container comic-border p-1 hard-shadow-sm group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<span class="font-headline-md text-headline-md tracking-wider text-on-surface uppercase">SAINT REGUS</span>
+</a>
+<!-- Search Bar (on_left configuration) -->
+<div class="hidden lg:flex items-center relative">
+<span class="material-symbols-outlined absolute left-3 text-on-surface select-none pointer-events-none">search</span>
+<input class="pl-10 pr-4 py-1.5 w-64 xl:w-80 bg-surface-container-lowest text-on-surface font-body-sm comic-border focus:ring-0 focus:outline-none focus:bg-surface-container-low hard-shadow-sm text-sm" placeholder="Search games, reviews, authors..." type="text"/>
+</div>
+</div>
+<!-- Center Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-2">
+<!-- Active Nav: Home -->
+<a class="bg-primary-container text-on-surface font-headline-sm text-headline-sm uppercase px-3 py-1 border-2 border-on-surface hard-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Home</a>
+<a class="text-on-surface font-headline-sm text-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Browse Games</a>
+<a class="text-on-surface font-headline-sm text-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Top 50</a>
+<a class="text-on-surface font-headline-sm text-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Daily Highlights</a>
+<a class="text-on-surface font-headline-sm text-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 inline-flex items-center gap-1" href="#">
+<span>Admin Moderation</span>
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1 py-0.5 comic-border">MOD</span>
+</a>
+</nav>
+<!-- Trailing Actions / Auth State -->
+<div class="flex items-center gap-3">
+<!-- Anonymous Mode Indicator Pill -->
+<div class="hidden sm:flex items-center gap-1.5 bg-surface-container px-2.5 py-1 comic-border hard-shadow-sm" title="Anonymous Gamer mode indicator">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<span class="font-label-md text-label-md text-on-surface">ANON MODE ON</span>
+</div>
+<!-- Notification Icon -->
+<button aria-label="Notifications" class="w-9 h-9 bg-surface-container-lowest comic-border hard-shadow-sm flex items-center justify-center hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</button>
+<!-- User Profile Pill / Auth State -->
+<div class="flex items-center gap-2 pl-1">
+<button class="flex items-center gap-2 bg-surface-container-lowest comic-border px-2.5 py-1 hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100">
+<div class="w-6 h-6 bg-primary-container comic-border flex items-center justify-center font-label-md text-on-surface">
+              VK
+            </div>
+<span class="hidden sm:inline font-title-md text-title-md text-on-surface">VoxelKnight</span>
+<span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN EDITORIAL CANVAS -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-6 py-8 flex flex-col gap-12">
+<!-- STATUS BANNER: HONEST LAUNCH NOTICE -->
+<div class="w-full bg-primary-container comic-border p-3 flex flex-col md:flex-row items-center justify-between gap-3 hard-shadow">
+<div class="flex items-center gap-3">
+<span class="bg-on-surface text-primary-container px-2 py-0.5 font-label-md text-label-md comic-border">OFFICIAL NOTICE</span>
+<p class="font-body-md text-body-md text-on-surface font-bold">
+          COMMUNITY RANKINGS LIVE — Current minimum rating threshold: Open (1+ reviews). Only verified site reviews count.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-end md:self-auto text-xs font-label-md uppercase tracking-wider text-on-surface bg-surface-container-lowest px-2 py-1 comic-border">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+        Zero Bot Tolerance Enabled
+      </div>
+</div>
+<!-- HERO SECTION: HIGH-CONTRAST POP BRUTALISM -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left Column: Heavy Headline & Value Prop -->
+<div class="lg:col-span-8 bg-surface-container-lowest comic-border p-6 md:p-10 hard-shadow flex flex-col justify-between">
+<div>
+<!-- Subhead Badge -->
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-tertiary text-on-tertiary font-label-md text-label-md uppercase px-2.5 py-1 comic-border hard-shadow-sm">INDEPENDENT GAMING JOURNALISM</span>
+<span class="bg-surface text-on-surface font-label-md text-label-md uppercase px-2 py-1 comic-border">UNFILTERED &amp; UNCENSORED</span>
+</div>
+<!-- Massive Editorial Display -->
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-surface uppercase tracking-wide leading-none mb-6">
+            REAL GAMER RATINGS.<br/>
+<span class="bg-primary-container px-2 inline-block comic-border hard-shadow-sm mt-1">ZERO SPONSORED BS.</span>
+</h1>
+<!-- Crisp Value Proposition -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+            An independent platform built exclusively for PC, Console &amp; Mobile gamers. Only reviews submitted directly by our community count toward the rankings. Text-only honest reviews, community-voted daily highlights, and built-in spoiler shields.
+          </p>
+</div>
+<!-- Big Search Bar & Filter Pills -->
+<div class="flex flex-col gap-4 pt-4 comic-border-t">
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-on-surface select-none">search</span>
+<input class="w-full pl-11 pr-4 py-3 bg-surface text-on-surface font-body-md text-body-md comic-border hard-shadow-sm focus:ring-0 focus:outline-none focus:bg-surface-container-lowest" placeholder="Search across 4,200+ games &amp; verified community critique..." type="text"/>
+</div>
+<button class="bg-primary-container hover:bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm uppercase px-8 py-3 comic-border hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 flex items-center justify-center gap-2">
+<span>EXPLORE</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Platform Filter Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="font-label-md text-label-md text-on-surface uppercase mr-1">Filter System:</span>
+<button class="bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100">PC</button>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm transition-colors duration-100">PS5</button>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm transition-colors duration-100">Xbox Series</button>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm transition-colors duration-100">Switch</button>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm transition-colors duration-100">Steam Deck</button>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1 comic-border hard-shadow-sm transition-colors duration-100">Mobile</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Comic-Panel Manifesto & Primary Action Cards -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Call To Action Comic Card -->
+<div class="bg-primary-container comic-border p-6 hard-shadow flex flex-col justify-between flex-1">
+<div>
+<div class="w-10 h-10 bg-on-surface text-primary-container comic-border flex items-center justify-center mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rate_review</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">HAVE YOUR SAY</h2>
+<p class="font-body-md text-body-md text-on-surface mb-6">
+              Tired of 10/10 access-journalism fluff? Post your raw review. No influencer perks, no embargo pressure.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full bg-on-surface hover:bg-surface-container-lowest hover:text-on-surface text-primary-container font-headline-sm text-headline-sm uppercase py-3 px-4 comic-border hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit_note</span>
+<span>RATE A GAME</span>
+</button>
+<button class="w-full bg-surface-container-lowest hover:bg-surface text-on-surface font-headline-sm text-headline-sm uppercase py-3 px-4 comic-border hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">group_add</span>
+<span>JOIN THE COMMUNITY</span>
+</button>
+</div>
+</div>
+<!-- System Stats Comic Stamp Box -->
+<div class="bg-surface-container-lowest comic-border p-4 hard-shadow grid grid-cols-3 gap-2 text-center">
+<div class="border-r-2 border-on-surface pr-1">
+<div class="font-headline-md text-headline-md text-on-surface">14.8K</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">REVIEWS POSTED</div>
+</div>
+<div class="border-r-2 border-on-surface pr-1">
+<div class="font-headline-md text-headline-md text-on-surface">100%</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">COMMUNITY DRIVEN</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-tertiary">0</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPONSORED ADS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: DAILY HIGHLIGHTS (COMMUNITY VOTED) -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between border-b-[3px] border-on-surface pb-3">
+<div class="flex items-center gap-3">
+<div class="bg-on-surface text-primary-container p-1 comic-border">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">DAILY HIGHLIGHTS</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface uppercase bg-primary-container px-3 py-1 comic-border hard-shadow-sm hidden sm:inline-block">VOTED BY ACTIVE GAMERS IN PAST 24H</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left 8 Cols: Feature Review of the Day Card -->
+<div class="lg:col-span-8 bg-surface-container-lowest comic-border hard-shadow flex flex-col">
+<!-- Card Header Bar -->
+<div class="bg-primary-container comic-border-b px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="bg-on-surface text-primary-container font-label-md text-label-md uppercase px-2 py-0.5 comic-border">COMMUNITY REVIEW OF THE DAY</span>
+<span class="font-label-md text-label-md text-on-surface">2,410 READS TODAY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-0.5 comic-border">PC / PS5</span>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="p-6 md:p-8 flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="text-xs font-label-md text-on-surface-variant uppercase mb-1">FEATURED CRITIQUE</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase leading-none">METAPHOR: REFANTAZIO</h3>
+</div>
+<!-- Giant Hard Brutalist Rating Stamp -->
+<div class="flex items-center self-start md:self-auto bg-primary-container comic-border px-4 py-2 hard-shadow">
+<div class="flex flex-col items-center">
+<span class="font-headline-xl text-headline-xl leading-none text-on-surface">9.4</span>
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">VERDICT: ESSENTIAL</span>
+</div>
+</div>
+</div>
+<!-- Author & Metadata Line -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2.5 comic-border">
+<div class="w-8 h-8 bg-on-surface text-primary-container comic-border flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+<span class="font-title-md text-title-md text-on-surface">Anonymous Gamer #4092</span>
+<span class="bg-primary-container text-on-surface text-xs font-label-md px-1.5 py-0.5 comic-border">Verified Playtime: 74 hrs</span>
+<span class="text-xs font-body-sm text-on-surface-variant">Posted 9 hours ago</span>
+</div>
+</div>
+<!-- Review Text with Reddit-Style Interactive Spoiler Shield -->
+<div class="font-body-lg text-body-lg text-on-surface flex flex-col gap-4">
+<p>
+                Metaphor takes the proven Persona social loop and strips away the sluggish high-school padding for a ruthless fantasy succession tournament. The combat flexibility between turn-based synthesis and real-time squad ambush makes every dungeon a genuine tactical puzzle rather than a mindless grind.
+              </p>
+<!-- Interactive Spoiler Tag Box -->
+<div class="bg-surface comic-border p-4 relative overflow-hidden">
+<div class="flex items-center gap-2 mb-2 font-label-md text-label-md text-tertiary">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>COMMUNITY SPOILER WARNING: ACT 3 REVELATION</span>
+</div>
+<!-- Obfuscation Bar (Click to Reveal) -->
+<div class="cursor-pointer transition-all duration-150 bg-on-surface text-transparent hover:outline hover:outline-2 hover:outline-primary select-none p-3 comic-border relative group" id="spoiler-box-1" onclick="this.classList.toggle('bg-on-surface'); this.classList.toggle('text-transparent'); this.classList.toggle('bg-primary-container'); this.classList.toggle('text-on-surface');" title="Click to reveal hidden text">
+<span class="block font-body-md text-body-md">
+                    The sovereign king’s magic construct isn’t an ancient trial created by gods—it’s powered by the captured consciousness of the previous royal bloodline whose souls are burned as fuel for the national barrier.
+                  </span>
+<div class="absolute inset-0 flex items-center justify-center group-[.bg-primary-container]:hidden pointer-events-none">
+<span class="bg-primary-container text-on-surface font-label-md text-label-md px-3 py-1 comic-border hard-shadow-sm uppercase">
+                      ⚠️ SPOILER: CLICK TO REVEAL ENDGAME TWIST
+                    </span>
+</div>
+</div>
+</div>
+<p>
+                Audio direction is a relentless masterpiece. A pure return to form for Studio Zero that raises the bar for JRPGs this entire generation.
+              </p>
+</div>
+<!-- Review Footer: Upvotes & Thread Interaction -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-4 comic-border-t">
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-1.5 bg-surface hover:bg-primary-container comic-border px-3 py-1.5 hard-shadow-sm transition-colors duration-100 font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>AGREE (342)</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface hover:bg-surface-container-high comic-border px-3 py-1.5 hard-shadow-sm transition-colors duration-100 font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">thumb_down</span>
+<span>DISAGREE (18)</span>
+</button>
+<button class="flex items-center gap-1.5 bg-surface hover:bg-primary-container comic-border px-3 py-1.5 hard-shadow-sm transition-colors duration-100 font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+<span>48 DISCUSSION REPLIES</span>
+</button>
+</div>
+<a class="font-label-md text-label-md uppercase text-on-surface hover:text-tertiary flex items-center gap-1" href="#">
+<span>OPEN FULL THREAD</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right 4 Cols: Comic Comment of the Day Breakout Bubble -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Title Box -->
+<div class="bg-on-surface text-on-secondary comic-border p-3 flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-container">COMMUNITY CALLOUT</span>
+<span class="material-symbols-outlined text-primary-container">format_quote</span>
+</div>
+<!-- Speech Bubble Card -->
+<div class="bg-primary-container comic-border p-6 hard-shadow relative comic-tail">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-on-surface text-primary-container font-label-sm text-label-sm px-2 py-0.5 comic-border">COMMENT OF THE DAY</span>
+<span class="text-xs font-body-sm text-on-surface font-bold">148 Upvotes</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface uppercase leading-tight mb-4">
+              "YOU CANNOT COMPLAIN ABOUT RADAHN’S HITBOXES IN THE DLC IF YOU PLAYED WITH BLEED BUILD AND SUMMONED 3 PEOPLE. OWN YOUR CHEESE."
+            </p>
+<div class="comic-border-t pt-3 flex items-center justify-between text-xs font-body-sm">
+<span class="font-title-md text-on-surface">By <span class="underline">NeonDrifter</span></span>
+<span class="text-on-surface-variant">2h ago</span>
+</div>
+</div>
+<!-- Context attribution link -->
+<div class="mt-4 bg-surface-container-lowest comic-border p-4 hard-shadow">
+<div class="text-xs font-label-sm text-on-surface-variant uppercase mb-1">REPLYING UNDER:</div>
+<a class="font-title-md text-title-md text-on-surface hover:text-tertiary flex items-center justify-between group" href="#">
+<span>Elden Ring: Shadow of the Erdtree</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="mt-2 text-xs font-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="bg-surface-container-high px-1.5 py-0.5 comic-border">Score: 9.6/10</span>
+<span>• 840 Reviews</span>
+</div>
+</div>
+<!-- Quick Tip Box -->
+<div class="bg-surface-container-lowest comic-border p-4 hard-shadow flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<div class="text-xs font-body-sm">
+<span class="font-bold text-on-surface uppercase">PRO TIP:</span> Toggle your Anonymous Gamer status in top menu anytime to post critique without exposing your game platform ID.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: COMMUNITY TOP 50 PREVIEW (SPOTS #1 TO #4) -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between border-b-[3px] border-on-surface pb-3 gap-2">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm uppercase px-2 py-0.5 comic-border">PURE PLAYER CONSENSUS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase leading-none">COMMUNITY TOP 50 SPOTLIGHT</h2>
+</div>
+<a class="font-headline-sm text-headline-sm uppercase text-on-surface bg-primary-container px-4 py-2 comic-border hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 inline-flex items-center gap-2" href="#">
+<span>VIEW FULL TOP 50 LEADERBOARD</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Top 4 Table/Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Rank #1 Card -->
+<div class="bg-surface-container-lowest comic-border hard-shadow flex flex-col justify-between group hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-150">
+<div>
+<!-- Visual Header with Rank Badge -->
+<div class="relative bg-primary-container comic-border-b p-3 flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">#1</span>
+<span class="bg-on-surface text-primary-container font-label-md text-label-md px-2 py-0.5 comic-border">HALL OF FAME</span>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="w-full h-44 comic-border overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Graphic brutalist comic-style video game illustration depicting a vast decaying fantasy kingdom beneath a massive golden ethereal tree, stylized with high-contrast heavy ink outlines, pure flat canary yellow accents, and stark shadows in the Saint Regus pop-brutalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzaLiIazvWcnL1VyU_zAYd8hEVetr7EmhY3I5wE3SUudsE1JmPJY0U_K2KbLjPUEumhlmu0fCMQYR6VpbeqA0ykUkALquxsF4roRiiFcxzgyj3Mc136R2crNFcygoWQbBVzQvh0DWrmDeCRp_iMLEvBFy3R2pr7NM9fuSAG_snuEYw9lPEp7KSsRRjBZ4JxzM3qVekTwkxiNd5aCERtWVAxR-hIuOhR92kK1Or-Ms"/>
+<div class="absolute bottom-2 left-2 bg-on-surface text-on-secondary px-2 py-0.5 text-xs font-label-sm comic-border">
+                  PC / PS5 / XBOX
+                </div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase leading-snug">ELDEN RING: SHADOW OF ERDTREE</h3>
+<p class="text-xs font-body-sm text-on-surface-variant mt-1">FromSoftware • Action RPG</p>
+</div>
+</div>
+</div>
+<!-- Score & Stats Bar -->
+<div class="p-4 pt-0">
+<div class="bg-surface-container comic-border p-3 flex items-center justify-between">
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">COMMUNITY SCORE</div>
+<div class="font-headline-md text-headline-md text-on-surface leading-none">9.8<span class="text-sm font-body-sm text-on-surface-variant">/10</span></div>
+</div>
+<div class="text-right">
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">VOTES</div>
+<div class="font-title-md text-title-md text-on-surface">1,842</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank #2 Card -->
+<div class="bg-surface-container-lowest comic-border hard-shadow flex flex-col justify-between group hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-150">
+<div>
+<div class="relative bg-surface-container-high comic-border-b p-3 flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">#2</span>
+<span class="bg-on-surface text-on-secondary font-label-md text-label-md px-2 py-0.5 comic-border">COMMUNITY RUNNER-UP</span>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="w-full h-44 comic-border overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Pop-art comic-book illustration of a stylish neon anime fantasy world with daring royal contenders in colorful bold armor, rendered with intense black line art, bright canary yellow accents, and dramatic graphic novel screen tones conforming to the Saint Regus palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrK0f2NPQRQSis0LLolFlxq9dzLGSrp-YQC3AUjO9LS3h7iZnlAjY2-xXfgzcpvvn_fxpUssKY3opZQeSysPZ1TuDc9hAsecVN6DtcJ_0a8xZylwSQVFNQf0SSLuQwZNVm93-jcJbLrYdoW4VNm7K5AAB2a8Xfb4qdH6QdQV_XnzKuZ-STFO7w37I3wQIcNiMfqDH47n4uWjBfrxTZieUXP2Cg-m3UZ8f2WuS_5AM"/>
+<div class="absolute bottom-2 left-2 bg-on-surface text-on-secondary px-2 py-0.5 text-xs font-label-sm comic-border">
+                  PC / PS5 / XBOX
+                </div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase leading-snug">METAPHOR: REFANTAZIO</h3>
+<p class="text-xs font-body-sm text-on-surface-variant mt-1">Studio Zero • Turn-Based RPG</p>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<div class="bg-surface-container comic-border p-3 flex items-center justify-between">
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">COMMUNITY SCORE</div>
+<div class="font-headline-md text-headline-md text-on-surface leading-none">9.6<span class="text-sm font-body-sm text-on-surface-variant">/10</span></div>
+</div>
+<div class="text-right">
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">VOTES</div>
+<div class="font-title-md text-title-md text-on-surface">1,120</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank #3 Card -->
+<div class="bg-surface-container-lowest comic-border hard-shadow flex flex-col justify-between group hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-150">
+<div>
+<div class="relative bg-surface-container comic-border-b p-3 flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">#3</span>
+<span class="bg-on-surface text-on-secondary font-label-md text-label-md px-2 py-0.5 comic-border">TOP RATED INDIE</span>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="w-full h-44 comic-border overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Brutalist graphic novel artwork showing a poker card deck exploding into holographic neon chips and psychedelic CRT glitch patterns, utilizing stark 3px ink strokes, vibrant yellow hazard highlights, and high-impact white space in high-contrast pop brutalism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZI7TEo4rzs1iHvD3oWGj45N4kXAoTf34DYMuHrfxLJL-HcMqHA4HTEsqkm2Spwpg2h5g2PcDwQknDoQ9b7UmSNvHjyjLYSvUTxkdgmiwLoj5BQ2OWVuzn9ihNNNYtcn8R5DNQG_Rs1xZ0nCTqKsuzGrmab1AXgSCIsymnpdG9zamKN_VMBoApOaQ-yZN1meZA4Qscq7rLClGdMcekQK0nwqFb9tr3w3_RJb4hxSY"/>
+<div class="absolute bottom-2 left-2 bg-on-surface text-on-secondary px-2 py-0.5 text-xs font-label-sm comic-border">
+                  PC / SWITCH / MOBILE
+                </div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase leading-snug">BALATRO</h3>
+<p class="text-xs font-body-sm text-on-surface-variant mt-1">LocalThunk • Roguelike Deckbuilder</p>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<div class="bg-surface-container comic-border p-3 flex items-center justify-between">
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">COMMUNITY SCORE</div>
+<div class="font-headline-md text-headline-md text-on-surface leading-none">9.5<span class="text-sm font-body-sm text-on-surface-variant">/10</span></div>
+</div>
+<div class="text-right">
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">VOTES</div>
+<div class="font-title-md text-title-md text-on-surface">2,315</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rank #4 Card -->
+<div class="bg-surface-container-lowest comic-border hard-shadow flex flex-col justify-between group hover:-translate-x-1 hover:-translate-y-1 transition-transform duration-150">
+<div>
+<div class="relative bg-surface-container comic-border-b p-3 flex items-center justify-between">
+<span class="font-headline-lg text-headline-lg text-on-surface leading-none">#4</span>
+<span class="bg-on-surface text-on-secondary font-label-md text-label-md px-2 py-0.5 comic-border">CRITIC DEFIER</span>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<div class="w-full h-44 comic-border overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Comic book panel art of an ominous dystopian sci-fi sprawling metropolis with towering neon megastructures and lone mercenary cybernetic silhouette, rendered in aggressive black ink lines and energetic canary yellow glowing signs with pulp printing texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZcYZwNud0Db6YTg9EpMUpjDEYLCpUKqRzRia_No4kIJwidNlBzMc1qTiHzl5ohLeNN4bQ1iUv53C-BNu8O3D1GRSaCN3GaOWODA_ZNb15Csgu8o0zb48RJIN8IF5xYvxwwXoEAzxRnbnD7EZmYxBDYlpzHAljOSJb88BWDjC443BZGbb2aOM6fdkEbT_gmNPvZvDh5wimqCxp0l-6is7sotEXWxP8SWX5ppGsvJc"/>
+<div class="absolute bottom-2 left-2 bg-on-surface text-on-secondary px-2 py-0.5 text-xs font-label-sm comic-border">
+                  PC / PS5 / XBOX
+                </div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase leading-snug">CYBERPUNK 2077: PHANTOM LIBERTY</h3>
+<p class="text-xs font-body-sm text-on-surface-variant mt-1">CD Projekt Red • Action RPG</p>
+</div>
+</div>
+</div>
+<div class="p-4 pt-0">
+<div class="bg-surface-container comic-border p-3 flex items-center justify-between">
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">COMMUNITY SCORE</div>
+<div class="font-headline-md text-headline-md text-on-surface leading-none">9.2<span class="text-sm font-body-sm text-on-surface-variant">/10</span></div>
+</div>
+<div class="text-right">
+<div class="text-xs font-label-sm text-on-surface-variant uppercase">VOTES</div>
+<div class="font-title-md text-title-md text-on-surface">3,490</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: RECENTLY APPROVED REVIEWS (TEXT-ONLY, ADMIN APPROVED) -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between border-b-[3px] border-on-surface pb-3">
+<div class="flex items-center gap-3">
+<div class="bg-on-surface text-on-secondary p-1 comic-border">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase leading-none">RECENTLY APPROVED REVIEWS</h2>
+<p class="text-xs font-body-sm text-on-surface-variant mt-1">Admin verified community entries • No bots • Text-only truth</p>
+</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase px-3 py-1.5 comic-border hard-shadow-sm transition-colors duration-100 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>SORT: NEWEST FIRST</span>
+</button>
+</div>
+<!-- 3-Column Bento Grid of Text Reviews -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Review Card 1: Cyberpunk -->
+<div class="bg-surface-container-lowest comic-border hard-shadow p-6 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<!-- Review Card Header -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="bg-surface text-on-surface font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">PC VERSION</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-1">Cyberpunk 2077: Phantom Liberty</h3>
+</div>
+<div class="bg-primary-container comic-border px-3 py-1 text-center hard-shadow-sm flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">9.0</span>
+<span class="block text-[10px] font-label-sm font-bold text-on-surface">/10</span>
+</div>
+</div>
+<!-- Author Tag -->
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<span class="font-title-md text-on-surface">Kowalski_Dev</span>
+<span>•</span>
+<span class="text-tertiary font-label-sm">ADMIN APPROVED</span>
+<span>•</span>
+<span>18m ago</span>
+</div>
+<!-- Body Text with Spoiler Component -->
+<p class="font-body-md text-body-md text-on-surface">
+              Dogtown gives the game the dense urban claustrophobia it desperately missed in the 2020 launch. Idris Elba’s performance doesn't carry a hollow script; the moral compromises in the terminal choice felt genuinely sickening.
+            </p>
+<div class="cursor-pointer transition-all duration-150 bg-on-surface text-transparent p-2.5 comic-border relative group" onclick="this.classList.toggle('bg-on-surface'); this.classList.toggle('text-transparent'); this.classList.toggle('bg-primary-container'); this.classList.toggle('text-on-surface');" title="Click to reveal spoiler">
+<span class="font-body-sm text-body-sm">SPOILER: If you surrender Songbird to Reed, you wake up after a coma completely stripped of chrome and forgotten by everyone.</span>
+<div class="absolute inset-0 flex items-center justify-center group-[.bg-primary-container]:hidden pointer-events-none">
+<span class="bg-primary-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">
+                  [SPOILER: CLICK TO REVEAL ENDING STATE]
+                </span>
+</div>
+</div>
+</div>
+<!-- Review Footer -->
+<div class="comic-border-t pt-4 mt-6 flex items-center justify-between text-xs font-label-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>64 UPVOTES</span>
+</span>
+<a class="text-on-surface hover:text-tertiary flex items-center gap-1 uppercase" href="#">
+<span>12 REPLIES</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+<!-- Review Card 2: Balatro -->
+<div class="bg-surface-container-lowest comic-border hard-shadow p-6 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="bg-surface text-on-surface font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">STEAM DECK</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-1">Balatro</h3>
+</div>
+<div class="bg-primary-container comic-border px-3 py-1 text-center hard-shadow-sm flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">9.7</span>
+<span class="block text-[10px] font-label-sm font-bold text-on-surface">/10</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1 bg-surface-container px-1.5 py-0.5 comic-border text-on-surface">
+<span class="material-symbols-outlined text-xs">shield_person</span>
+<span class="font-title-md">Anon#8812</span>
+</div>
+<span>•</span>
+<span class="text-tertiary font-label-sm">ADMIN APPROVED</span>
+<span>•</span>
+<span>1h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Pure mathematical cocaine. I downloaded this for a 30-minute commute and accidentally watched sunrise while calculating multiplier triggers on an Obelisk Joker run. It proves that tight mechanics beat $200M cinematic budgets every time.
+            </p>
+<div class="bg-surface-container-low p-3 comic-border text-xs font-body-sm text-on-surface-variant">
+<span class="font-bold text-on-surface uppercase">VERIFIED STATUS:</span> Played on Steam Deck OLED. Zero crashes recorded across 110 runs.
+            </div>
+</div>
+<div class="comic-border-t pt-4 mt-6 flex items-center justify-between text-xs font-label-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>189 UPVOTES</span>
+</span>
+<a class="text-on-surface hover:text-tertiary flex items-center gap-1 uppercase" href="#">
+<span>31 REPLIES</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+<!-- Review Card 3: Silksong (Community Watch) -->
+<div class="bg-surface-container-lowest comic-border hard-shadow p-6 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">COMMUNITY WATCH</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-1">Hollow Knight: Silksong</h3>
+</div>
+<div class="bg-surface-container-high comic-border px-3 py-1 text-center hard-shadow-sm flex-shrink-0">
+<span class="font-headline-sm text-headline-sm text-on-surface">? / 10</span>
+<span class="block text-[10px] font-label-sm font-bold text-on-surface-variant">ANTICIPATION</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs font-body-sm text-on-surface-variant">
+<span class="font-title-md text-on-surface">Citadel_Ghost</span>
+<span>•</span>
+<span class="text-tertiary font-label-sm">ADMIN APPROVED DISPATCH</span>
+<span>•</span>
+<span>3h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Community Watch Entry: Team Cherry registered new rating ratings in Australia and South Korea today. We have blacklisted fake leak accounts. Until an official release date hits, all placeholder reviews are quarantined to preserve scoring integrity.
+            </p>
+<div class="bg-primary-container comic-border p-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface">shield</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface">Protected Entry: Review submissions locked until Day 1 Launch.</span>
+</div>
+</div>
+<div class="comic-border-t pt-4 mt-6 flex items-center justify-between text-xs font-label-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-sm">thumb_up</span>
+<span>512 UPVOTES</span>
+</span>
+<a class="text-on-surface hover:text-tertiary flex items-center gap-1 uppercase" href="#">
+<span>94 REPLIES</span>
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: RECENTLY ADDED GAMES & EMPTY LAUNCH STATE NOTICE -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left 8 Cols: Recently Added Games Pending First Reviews -->
+<div class="lg:col-span-8 bg-surface-container-lowest comic-border p-6 hard-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b-[3px] border-on-surface pb-3 mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface">add_box</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">JUST ADDED TO DATABASE</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface bg-surface-container-high px-2.5 py-1 comic-border">BE THE FIRST TO RATE</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Game Pending 1 -->
+<div class="bg-surface comic-border p-4 flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">NOT YET RATED</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-2">Neva</h4>
+<p class="text-xs font-body-sm text-on-surface-variant">Nomada Studio • PC / Switch</p>
+</div>
+<div class="pt-4 mt-4 comic-border-t">
+<button class="w-full bg-primary-container text-on-surface font-label-md text-label-md py-1.5 comic-border hard-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 uppercase">
+                  Submit Review
+                </button>
+</div>
+</div>
+<!-- Game Pending 2 -->
+<div class="bg-surface comic-border p-4 flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">NOT YET RATED</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-2">Slitterhead</h4>
+<p class="text-xs font-body-sm text-on-surface-variant">Bokeh Game Studio • PS5 / PC</p>
+</div>
+<div class="pt-4 mt-4 comic-border-t">
+<button class="w-full bg-primary-container text-on-surface font-label-md text-label-md py-1.5 comic-border hard-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 uppercase">
+                  Submit Review
+                </button>
+</div>
+</div>
+<!-- Game Pending 3 -->
+<div class="bg-surface comic-border p-4 flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 comic-border uppercase">NOT YET RATED</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mt-2">Dragon Age: Veilguard</h4>
+<p class="text-xs font-body-sm text-on-surface-variant">BioWare • PC / PS5 / Xbox</p>
+</div>
+<div class="pt-4 mt-4 comic-border-t">
+<button class="w-full bg-primary-container text-on-surface font-label-md text-label-md py-1.5 comic-border hard-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 uppercase">
+                  Submit Review
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 comic-border-t flex items-center justify-between text-xs font-body-sm text-on-surface-variant">
+<span>Games added via community moderation pipeline.</span>
+<a class="font-bold text-on-surface hover:underline uppercase" href="#">Browse all 4,200+ games →</a>
+</div>
+</div>
+<!-- Right 4 Cols: "Suggest a Missing Game" Honest Prompt Card -->
+<div class="lg:col-span-4 bg-primary-container comic-border p-6 hard-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-on-surface text-primary-container comic-border flex items-center justify-center mb-4 hard-shadow-sm">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">CAN'T FIND YOUR GAME?</h3>
+<p class="font-body-md text-body-md text-on-surface mb-6">
+            We are completely independent. If an indie gem, obscure retro port, or brand-new release is missing, submit it directly to the Saint Regus catalog.
+          </p>
+<div class="bg-surface-container-lowest comic-border p-3 mb-6 hard-shadow-sm text-xs font-body-sm">
+<span class="font-bold uppercase text-on-surface">Queue Time:</span> Average approval is under 20 minutes by active community mods.
+          </div>
+</div>
+<button class="w-full bg-on-surface hover:bg-surface-container-lowest hover:text-on-surface text-primary-container font-headline-sm text-headline-sm uppercase py-3.5 px-4 comic-border hard-shadow hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-100 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">library_add</span>
+<span>SUGGEST A MISSING GAME</span>
+</button>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Component Source of Truth) -->
+<footer class="w-full bg-surface comic-border-t mt-16">
+<div class="w-full max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Brand & Copyright -->
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 bg-primary-container comic-border flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface uppercase">SAINT REGUS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface text-center md:text-left">
+          © 2025 SAINT REGUS GAMING JOURNALISM. ALL RIGHTS RESERVED. RAW &amp; UNFILTERED.
+        </p>
+</div>
+<!-- Links Cluster from JSON -->
+<div class="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2">
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-tertiary transition-colors duration-150" href="#">Suggest a Missing Game</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-tertiary transition-colors duration-150" href="#">Community Guidelines</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-tertiary transition-colors duration-150" href="#">Help Center</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-tertiary transition-colors duration-150" href="#">Privacy Policy</a>
+<a class="font-title-md text-title-md text-on-surface-variant hover:text-tertiary transition-colors duration-150" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Inline Script for Interactive Micro-Interactions -->
+<script>
+    // Lightweight atmospheric spoiler reveal log
+    console.log("Saint Regus Core Gaming System Initialized. Anonymous Mode Active.");
+  </script>
+</body></html>

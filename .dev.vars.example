@@ -1,0 +1,9 @@
+# Server-only values. Use wrangler secret put for production secrets.
+FIREBASE_PROJECT_ID=
+FIREBASE_WEB_API_KEY=
+# Local development only; production refuses emulator authentication.
+FIREBASE_AUTH_EMULATOR_HOST=
+# Comma-separated verified Firebase user IDs. Do not grant admin by display name.
+ADMIN_UIDS=
+IGDB_CLIENT_ID=
+IGDB_CLIENT_SECRET=

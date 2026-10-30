@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAINT REGUS — Search Results for "Persona"</title>
+<!-- Google Fonts: Anton & Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#cdc7aa",
+            "background": "#f9f9f9",
+            "outline": "#7c775f",
+            "surface-container-low": "#f3f3f4",
+            "surface-tint": "#6a5f00",
+            "on-tertiary-fixed-variant": "#8e1400",
+            "on-secondary-container": "#656464",
+            "on-primary-container": "#726600",
+            "on-secondary-fixed-variant": "#474646",
+            "error": "#ba1a1a",
+            "on-surface": "#1a1c1c",
+            "surface-bright": "#f9f9f9",
+            "primary-container": "#ffe600",
+            "on-secondary-fixed": "#1c1b1b",
+            "inverse-surface": "#2f3131",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f0f1f1",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdad3",
+            "tertiary-fixed-dim": "#ffb4a5",
+            "surface-container-high": "#e8e8e8",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#c8c6c5",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#dec800",
+            "on-error": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "on-background": "#1a1c1c",
+            "secondary-fixed": "#e5e2e1",
+            "surface": "#f9f9f9",
+            "on-tertiary-container": "#c72000",
+            "on-primary-fixed-variant": "#504700",
+            "primary-fixed-dim": "#dec800",
+            "surface-dim": "#dadada",
+            "primary": "#6a5f00",
+            "surface-variant": "#e2e2e2",
+            "on-primary-fixed": "#201c00",
+            "tertiary": "#b91e00",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#3e0400",
+            "on-surface-variant": "#4b4731",
+            "secondary": "#5f5e5e",
+            "surface-container": "#eeeeee",
+            "secondary-container": "#e5e2e1",
+            "primary-fixed": "#fde400",
+            "tertiary-container": "#ffddd6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-desktop": "2rem",
+            "gutter": "1.25rem",
+            "margin-desktop": "3rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Anton"],
+            "headline-xl-mobile": ["Anton"],
+            "headline-md": ["Anton"],
+            "headline-sm": ["Anton"],
+            "body-lg": ["Space Grotesk"],
+            "label-lg": ["Anton"],
+            "label-md": ["Space Grotesk"],
+            "body-sm": ["Space Grotesk"],
+            "title-md": ["Space Grotesk"],
+            "headline-xl": ["Anton"],
+            "label-sm": ["Space Grotesk"],
+            "headline-lg-mobile": ["Anton"],
+            "body-md": ["Space Grotesk"],
+            "title-lg": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-lg": ["16px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "700" }],
+            "headline-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title-lg": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .comic-shadow {
+      box-shadow: 4px 4px 0px #1a1c1c;
+    }
+    .comic-shadow-lg {
+      box-shadow: 6px 6px 0px #1a1c1c;
+    }
+    .comic-shadow-sm {
+      box-shadow: 2px 2px 0px #1a1c1c;
+    }
+    .comic-shadow-yellow {
+      box-shadow: 4px 4px 0px #ffe600;
+    }
+    .comic-border {
+      border: 2.5px solid #1a1c1c;
+    }
+    .comic-border-thick {
+      border: 3.5px solid #1a1c1c;
+    }
+    .halftone-dots {
+      background-image: radial-gradient(#1a1c1c 1.5px, transparent 1.5px);
+      background-size: 8px 8px;
+    }
+    .hazard-stripe {
+      background: repeating-linear-gradient(
+        -45deg,
+        #ffe600,
+        #ffe600 12px,
+        #1a1c1c 12px,
+        #1a1c1c 24px
+      );
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-surface">
+<!-- TOP NAVIGATION BAR (Shared Component Anchor) -->
+<header class="w-full bg-surface-container-lowest dark:bg-inverse-surface border-b-[3px] border-on-surface dark:border-outline-variant shadow-[0px_4px_0px_#1a1c1c] sticky top-0 z-50">
+<div class="w-full px-6 py-3 flex justify-between items-center max-w-7xl mx-auto gap-4">
+<!-- Brand Logo & Wordmark Anchor -->
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 group" href="#">
+<div class="bg-primary-container comic-border px-2 py-0.5 font-headline-md text-headline-md tracking-wider text-on-surface uppercase comic-shadow-sm group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-100">
+            SAINT REGUS
+          </div>
+<span class="hidden sm:inline-block bg-on-surface text-surface-container-lowest font-label-sm text-label-sm uppercase px-1.5 py-0.5">
+            JOURNALISM
+          </span>
+</a>
+<!-- Header Search Bar (on_left) -->
+<div class="relative hidden lg:block w-72">
+<div class="flex items-center bg-surface-container-lowest comic-border comic-shadow-sm px-2.5 py-1">
+<span class="material-symbols-outlined text-on-surface text-lg mr-1.5" data-icon="search">search</span>
+<input class="w-full border-none p-0 font-body-md text-body-md text-on-surface bg-transparent focus:ring-0 focus:outline-none" placeholder="Search archive..." type="text" value="Persona"/>
+<span class="bg-primary-container font-label-sm text-label-sm px-1 comic-border">⌘K</span>
+</div>
+</div>
+</div>
+<!-- Navigation Links Cluster -->
+<nav class="hidden md:flex items-center gap-1.5">
+<a class="text-on-surface dark:text-inverse-on-surface font-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Home</a>
+<!-- Active Nav: "Browse Games" matches directory/search intent -->
+<a class="bg-primary-container text-on-surface dark:text-on-surface font-headline-sm uppercase px-3 py-1 border-2 border-on-surface comic-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Browse Games</a>
+<a class="text-on-surface dark:text-inverse-on-surface font-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Top 50</a>
+<a class="text-on-surface dark:text-inverse-on-surface font-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100" href="#">Daily Highlights</a>
+<a class="text-on-surface dark:text-inverse-on-surface font-headline-sm uppercase px-3 py-1 border-2 border-transparent hover:border-on-surface hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-100 flex items-center gap-1 text-tertiary" href="#">
+<span class="material-symbols-outlined text-base" data-icon="admin_panel_settings">admin_panel_settings</span>
+          Admin Moderation
+        </a>
+</nav>
+<!-- Trailing Action Cluster & User Indicator -->
+<div class="flex items-center gap-3">
+<!-- Anonymous Gamer Pill Badge -->
+<div class="flex items-center bg-surface-container comic-border px-2 py-1 gap-1.5 text-on-surface" title="Active user avatar with Anonymous Gamer mode indicator">
+<span class="w-2.5 h-2.5 rounded-none bg-primary-container border border-on-surface inline-block animate-pulse"></span>
+<span class="material-symbols-outlined text-base" data-icon="shield_person">shield_person</span>
+<span class="font-label-md text-label-md hidden sm:inline uppercase">ANON GAMER</span>
+</div>
+<!-- Notification Trigger -->
+<button class="relative bg-surface-container-lowest comic-border p-1.5 comic-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined block text-xl" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary font-label-sm text-label-sm w-4 h-4 flex items-center justify-center comic-border">2</span>
+</button>
+<!-- Auth CTAs -->
+<div class="hidden sm:flex items-center gap-2">
+<button class="bg-surface-container-lowest text-on-surface font-label-lg text-label-lg uppercase px-3 py-1 comic-border comic-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform">
+            Sign In
+          </button>
+<button class="bg-primary-container text-on-surface font-label-lg text-label-lg uppercase px-3 py-1 comic-border comic-shadow-sm hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform">
+            Register
+          </button>
+</div>
+</div>
+</div>
+</header>
+<!-- EDITORIAL RUNNING TICKER / MARQUEE BANNER -->
+<div class="bg-on-surface text-surface-container-lowest border-b-[2.5px] border-on-surface py-1 overflow-hidden select-none">
+<div class="flex items-center gap-8 whitespace-nowrap font-label-md text-label-md uppercase tracking-wider animate-none px-4">
+<span class="bg-primary-container text-on-surface px-1 font-bold">DATABASE UPDATE</span>
+<span>INDEXING 18,490 ACCREDITED CRITIQUES</span>
+<span>★</span>
+<span>ATLUS STUDIOS RETROSPECTIVE UNLOCKED</span>
+<span>★</span>
+<span>RAW SCORES • ZERO EMBARGO BIAS</span>
+<span>★</span>
+<span>COMMUNITY VERDICT V2.4 RUNNING</span>
+</div>
+</div>
+<!-- MAIN CANVAS: COMIC-GRID EDITORIAL CONTAINER -->
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8">
+<!-- SEARCH OVERVIEW & REVISION BAR (Bento Header Comic Cell) -->
+<section class="comic-border comic-shadow bg-surface-container-lowest p-6 sm:p-8 relative overflow-hidden">
+<!-- Halftone Accent Corner -->
+<div class="absolute -top-8 -right-8 w-36 h-36 halftone-dots opacity-20 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b-[2.5px] border-on-surface">
+<div>
+<div class="inline-flex items-center gap-2 bg-primary-container comic-border px-2.5 py-0.5 font-label-md text-label-md uppercase mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="database">database</span>
+<span>CATALOG QUERY REGISTERED</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface uppercase leading-none tracking-tight">
+            SEARCH RESULTS FOR: <span class="bg-primary-container px-2 border-2 border-on-surface">"PERSONA"</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+            Showing <strong class="text-on-surface font-bold">14 matching titles</strong> across 6 verified platform ecosystems. Indexed from official studio masters and approved Saint Regus journalist scores.
+          </p>
+</div>
+<!-- Query Stats Speech Balloon -->
+<div class="self-start md:self-auto bg-surface-bright comic-border px-4 py-3 comic-shadow-sm flex items-center gap-3">
+<div class="bg-on-surface text-primary-container p-2 font-headline-sm text-headline-sm">
+            14
+          </div>
+<div>
+<div class="font-label-sm text-label-sm uppercase text-on-surface-variant">CANONICAL ENTRIES</div>
+<div class="font-title-md text-title-md text-on-surface">8 REMAKES • 6 MAINLINE</div>
+</div>
+</div>
+</div>
+<!-- Revision Input Form & Live Platform Filter Switcher -->
+<div class="pt-6 grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+<!-- Input With Clear Button -->
+<div class="lg:col-span-6 relative">
+<label class="block font-label-sm text-label-sm uppercase text-on-surface mb-1">Live Query Refinement</label>
+<div class="flex items-center comic-border bg-surface-container-lowest comic-shadow-sm focus-within:shadow-[4px_4px_0px_#ffe600] transition-shadow">
+<span class="material-symbols-outlined px-3 text-on-surface" data-icon="travel_explore">travel_explore</span>
+<input class="w-full py-2 font-body-lg text-body-lg text-on-surface border-none focus:ring-0 focus:outline-none" id="search-input" placeholder="Refine search query..." type="text" value="Persona"/>
+<button class="px-3 py-1 font-headline-sm text-headline-sm text-on-surface hover:text-tertiary transition-colors" onclick="document.getElementById('search-input').value=''; document.getElementById('search-input').focus();" title="Clear Search">
+              ×
+            </button>
+<button class="bg-primary-container font-label-lg text-label-lg uppercase px-4 py-2 border-l-[2.5px] border-on-surface hover:bg-yellow-400 transition-colors">
+              RE-RUN
+            </button>
+</div>
+</div>
+<!-- Filter Chips (Platform & Category) -->
+<div class="lg:col-span-6 flex flex-wrap gap-2 items-center justify-start lg:justify-end self-end">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant mr-1">Platform:</span>
+<button class="comic-border px-3 py-1 bg-on-surface text-surface-container-lowest font-label-md text-label-md uppercase comic-shadow-sm">
+            [ ALL (14) ]
+          </button>
+<button class="comic-border px-3 py-1 bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase comic-shadow-sm transition-colors">
+            PC
+          </button>
+<button class="comic-border px-3 py-1 bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase comic-shadow-sm transition-colors">
+            PS5
+          </button>
+<button class="comic-border px-3 py-1 bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase comic-shadow-sm transition-colors">
+            XBOX
+          </button>
+<button class="comic-border px-3 py-1 bg-surface-container-lowest hover:bg-primary-container text-on-surface font-label-md text-label-md uppercase comic-shadow-sm transition-colors">
+            SWITCH
+          </button>
+<div class="h-6 w-[2px] bg-on-surface mx-1 hidden sm:block"></div>
+<!-- Genre Quick Tag -->
+<div class="comic-border px-2.5 py-1 bg-surface-container font-label-sm text-label-sm uppercase text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="filter_alt">filter_alt</span>
+<span>GENRE: JRPG / TACTICS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DISAMBIGUATION NOTICE BAR (Comic Book Narration Strip) -->
+<div class="bg-primary-container comic-border p-4 comic-shadow flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="bg-on-surface text-primary-container p-1.5 comic-border font-headline-sm text-headline-sm flex items-center justify-center">
+          !
+        </span>
+<div>
+<span class="font-headline-sm text-headline-sm uppercase tracking-wide">SERIES DISAMBIGUATION NOTE:</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            The Persona saga features multiple re-releases, total graphic engine remakes, and enhanced ports with divergent battle systems. Review the edition markers below to avoid purchasing redundant SKU releases.
+          </p>
+</div>
+</div>
+<div class="flex-shrink-0">
+<span class="bg-surface-container-lowest font-label-sm text-label-sm uppercase px-3 py-1 comic-border">
+          GUIDE UPDATED: Q1 2025
+        </span>
+</div>
+</div>
+<!-- MAIN RESULTS GRID (Comic Panel Editorial Bento) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- RESULT CARD 1: Persona 3 Reload -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all">
+<!-- Panel Header Tape -->
+<div class="bg-primary-container border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">CANONICAL REMAKE • 2024</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2">ATLUS P-STUDIO</span>
+</div>
+<!-- Comic Panel Visual Asset -->
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Graphic comic style game visual showcasing Persona 3 Reload protagonist standing before a towering Tartarus tower bathed in deep cobalt moonlight with sharp comic ink contours, canary yellow interface accents, and bold stylized shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2XXpb6owg2vObIQT03QF6_48U7rX5yZoub3gprLzn4-QdWPcBJhkkOUlGngoma_Av4_cshd0YsrJ5YnUXZZqHt2-R8R_b6zZZT1RtWUzwUshsyKlthq4Fy14nTiTxEYm5Al88RNN9LvNthn9eOeVMCm0HCzKe0PXz5TR5n5GYqUCUqb6CVE01IVvgtV4jAJiXLbnIcc81xR00l9Vl6zMgvxrwAbwp5biX_lOzHuE"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-primary-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">FULL REMAKE</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">UNREAL ENGINE</span>
+</div>
+<!-- Platform Chips -->
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            PC • PS5 • XBOX
+          </div>
+</div>
+<!-- Content & Breakdown -->
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 3 RELOAD
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Ground-up remake of the 2006 classic. Features modern battle commands from P5, expanded side vignettes, and full vocal cast re-recording.
+            </p>
+</div>
+<!-- Studio & Editorial Metric Panel -->
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<!-- Score Badge -->
+<div class="flex items-center gap-2">
+<div class="bg-primary-container comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface">9.3</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">ESSENTIAL</div>
+<div class="text-secondary font-body-sm">1,410 ratings</div>
+</div>
+</div>
+<!-- Journalist Seal -->
+<span class="font-label-sm text-label-sm uppercase bg-surface-container px-2 py-1 comic-border text-on-surface">
+                CERTIFIED FRESH
+              </span>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-surface-container comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface comic-shadow-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Rate
+              </button>
+<a class="bg-primary-container hover:bg-yellow-400 comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Read Reviews
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 2: Persona 3 Portable -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all">
+<!-- Panel Header Tape -->
+<div class="bg-surface-container-high border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">REMASTER / PSP CLASSIC • 2023</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2">LEGACY PORT</span>
+</div>
+<!-- Comic Panel Visual Asset -->
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Pulp comic strip panel displaying female protagonist from Persona 3 Portable rendered with striking monochrome ink crosshatching and high-contrast yellow typography callouts against a stylized urban school background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0j3m1P0f7tua0YTLJg-SfAfIrvdtimzGNWg3Cg8LDTiosNchodo-UDByir5NhYWiN4oNCSG2VMZCvklmVHYCiKA-W9bk4C8U34ErN-vVJU0BZpP3FLeKCuea_G8Bs37bHCn8MjIDExtp8VH0-mJtJGoI0ucir_mbrUYcP7yhwRZWuctunnbE3GA7-Lnh-7l4vMSrJE-X_fTK9m5WhVLdtR-vd_kieVREAU3NDQV0"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">VISUAL NOVEL STYLE</span>
+<span class="bg-primary-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">FEMALE PROTAGONIST</span>
+</div>
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            PC • SWITCH • PS4
+          </div>
+</div>
+<!-- Content & Breakdown -->
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 3 PORTABLE
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Point-and-click exploration port featuring the exclusive FeMC route, altered social links, and streamlined dungeon crawler mechanics.
+            </p>
+</div>
+<!-- Studio & Editorial Metric Panel -->
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container-high comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface">8.7</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">HIGH ACCLAIM</div>
+<div class="text-secondary font-body-sm">620 ratings</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container px-2 py-1 comic-border text-on-surface">
+                RETRO CANON
+              </span>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-surface-container comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface comic-shadow-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Rate
+              </button>
+<a class="bg-primary-container hover:bg-yellow-400 comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Read Reviews
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 3: Persona 5 Royal (Flagship Highlight) -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all relative">
+<!-- Editor's Pick Comic Ribbon -->
+<div class="absolute -top-3 -right-3 z-20 bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase px-2 py-0.5 comic-border comic-shadow-sm rotate-2">
+          MASTERPIECE
+        </div>
+<div class="bg-primary-container border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">DEFINITIVE EDITION • 2020</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2">ATLUS MAINLINE</span>
+</div>
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Dramatic pop art graphic illustration depicting the masked Phantom Thieves in crimson and stark black graphic ink lines against a canary yellow pop-brutalist explosion burst background with crisp comic outlines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb-UNy-7lREspLOzM9P6LYMja0VE4u8AcsNL5dw-GyUftcqSpvWi5MPNGZnufhKdb0h6V6nneKgGnyLBRiJL1Kw3ANcU3EXg6If1tnP1c0CWUouoKAdIiLfUtRUWscmygeF-zhExf8HF6c1ncdCljmU__7Z6XE9nfmnUT4DV6pg8A8hQU7NFOtbJHWMsRZXPd_RHgHGm1o_2mTiiEWaQwPfZNasX46Y_GalYEYNcE"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-primary-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">EXPANDED EDITION</span>
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.5 comic-border">3RD SEMESTER</span>
+</div>
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            PC • PS5 • SWITCH • XBOX
+          </div>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 5 ROYAL
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              The consummate Phantom Thieves epic. Adds Kasumi Yoshizawa, the Maruki counseling arc, grappling hook stealth traversal, and 30 hours of new story.
+            </p>
+</div>
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface">9.7</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">RECORD HIGH</div>
+<div class="text-secondary font-body-sm">4,890 ratings</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-primary-container px-2 py-1 comic-border text-on-surface font-bold">
+                SAINT REGUS #2 OF DECADE
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-surface-container comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface comic-shadow-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Rate
+              </button>
+<a class="bg-primary-container hover:bg-yellow-400 comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Read Reviews
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 4: Persona 5 Tactica -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all">
+<div class="bg-surface-container-high border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">STRATEGY SPIN-OFF • 2023</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2">STUDIO SPIN-OFF</span>
+</div>
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Stylized chibi comic graphic layout featuring revolutionary Phantom Thieves flag waving over grid-based tactical battlegrounds, rendered with stark pop inks, yellow comic halftone banners, and clean sharp outlines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD22JkvqEhzkhm0S-om-CbmbHDlQ86n6VZL3MW6O7Zyy45bjqLhL4RKzcXgQWKsi6c7nMqQGFwUNDR2TRCkGxBmp2Sy9GUOcjSdmrwhPDJIu-Dva_bzgUC8epSQc1P7drH4U4JbxAKEf2QUrInc3X9v6vkcKk77wKtM2ohWuzq3IsbEclURCVf_CBO2v5mgBuWFs3ZuL23LioA8hQ60EvUmnTp3yJBMEHi7LgUsxgY"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">TACTICAL RPG</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">CHIBI VISUALS</span>
+</div>
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            MULTIPLATFORM
+          </div>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 5 TACTICA
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Turn-based grid battle spin-off introducing Erina and the Rebel Corps in an alternate Victorian-themed cognitive realm.
+            </p>
+</div>
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container-high comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface">7.9</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">FAIR PASS</div>
+<div class="text-secondary font-body-sm">380 ratings</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container px-2 py-1 comic-border text-on-surface">
+                TACTICAL ENTRY
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-surface-container comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface comic-shadow-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Rate
+              </button>
+<a class="bg-primary-container hover:bg-yellow-400 comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Read Reviews
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 5: Persona 4 Golden -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all">
+<div class="bg-primary-container border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">ENHANCED MASTER • 2020 PC</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.2">CLASSIC ERA</span>
+</div>
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Graphic novel styled scene featuring Inaba rural fog mystery with the yellow-tinted Investigation Team in front of stacked midnight TV monitors, rendered in bold high-contrast comic ink lines with graphic pop art accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuhFro2tWi_SGc-dpRahrBBnMzJlEw3QOGFJ4_hfvDLBh4PCapiEU2c58fctPI3jpNDQ2s_4TZI1JOZurZJNou9nhur6XeZd6SGrMxv1_OuEcT5uZQHZiw3fE7bdkjrbIweWS3A0tISftIhxCVeYyo4089whars5b8UajvtKCyFliSYp-zGIRMTRHAMsx7dg8tov_JfyKFNztHbyAo38ehqRWEjlGGDTUdHyXkpjM"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-primary-container text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">MYSTERY CLASSIC</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">EXPANDED DUNGEON</span>
+</div>
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            PC • PS4 • SWITCH • XBOX
+          </div>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 4 GOLDEN
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              The murder-mystery classic set in foggy rural Inaba. Includes Marie social link, scooter combat attacks, and golden winter epilogue.
+            </p>
+</div>
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface">9.4</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">TIMELESS</div>
+<div class="text-secondary font-body-sm">3,120 ratings</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container px-2 py-1 comic-border text-on-surface">
+                HALL OF FAME
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest hover:bg-surface-container comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface comic-shadow-sm transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Rate
+              </button>
+<a class="bg-primary-container hover:bg-yellow-400 comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Read Reviews
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 6: Persona 5: The Phantom X (Pending / Mobile) -->
+<article class="comic-border bg-surface-container-lowest comic-shadow flex flex-col justify-between hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] transition-all">
+<div class="bg-surface-container-highest border-b-[2.5px] border-on-surface px-4 py-1.5 flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-on-surface tracking-wider">UPCOMING / GLOBAL BETA</span>
+<span class="bg-tertiary text-on-tertiary font-label-sm text-label-sm px-1.5 py-0.2">MOBILE / PC</span>
+</div>
+<div class="relative border-b-[2.5px] border-on-surface bg-surface-container-high h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300" data-alt="Manga editorial panel featuring Wonder the owl persona and new protagonist of Phantom X in modern Tokyo street crossing with graphic black crosshatching and high-visibility canary yellow street signs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeVUPu1XM0Zf4XHZa7BZeqEr6K_dXJMZZhVHnKDZOVWrZBakRzvRvAGKmRfPAM5j7DCYgZqtukY5CyBjM5pRAzsJb5kep8wP4VTYvrzTVwH09G7Z1q9idE3dewX3_iUhyvgvvCv4KS0t2hz-OPSJyo0HEd_KhLOiiTB7YYYPoKp4bUDLee9tDDgmkB949prdpjAN0AP2qB9fVxnzVDxEQkjuTRnWnj0AXXci5VKO4"/>
+<div class="absolute bottom-2 left-2 flex gap-1">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 comic-border">GACHA SPIN-OFF</span>
+<span class="bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-1.5 py-0.5">PERFECT WORLD CO.</span>
+</div>
+<div class="absolute top-2 right-2 bg-on-surface text-surface-container-lowest font-label-sm text-label-sm px-2 py-0.5">
+            IOS • ANDROID • PC
+          </div>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start gap-2 mb-2">
+<h2 class="font-headline-md text-headline-md uppercase leading-none text-on-surface">
+                PERSONA 5: PHANTOM X
+              </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Officially licensed mobile spin-off set in modern Shibuya. Parallel Phantom Thieves universe currently running international server tests.
+            </p>
+</div>
+<div class="border-t-[2px] border-on-surface pt-3 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-surface-container comic-border px-2 py-1 comic-shadow-sm text-center">
+<div class="font-headline-md text-headline-md leading-none text-on-surface-variant">--</div>
+<div class="font-label-sm text-label-sm uppercase leading-none">SCORE</div>
+</div>
+<div class="text-xs">
+<div class="font-title-md text-title-md leading-tight text-on-surface">NOT YET RATED</div>
+<div class="text-secondary font-body-sm">Pending Global Launch</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container px-2 py-1 comic-border text-on-surface">
+                TRACK TITLE
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="bg-surface-container-lowest comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface-variant opacity-75 cursor-not-allowed">
+                Rating Closed
+              </button>
+<a class="bg-surface-container-high hover:bg-surface-variant comic-border py-1.5 font-label-md text-label-md uppercase text-on-surface text-center comic-shadow-sm transition-colors" href="#">
+                Beta Reports
+              </a>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- SECTION 4: 'DIDN'T FIND WHAT YOU WERE LOOKING FOR?' COMIC CARD -->
+<section class="comic-border comic-shadow-lg bg-surface-container-lowest p-6 sm:p-8 relative">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="hidden sm:flex bg-primary-container p-3 comic-border comic-shadow-sm">
+<span class="material-symbols-outlined text-4xl" data-icon="search_off">search_off</span>
+</div>
+<div>
+<div class="inline-block bg-on-surface text-surface-container-lowest font-label-sm text-label-sm uppercase px-2 py-0.5 mb-2">
+              COMMUNITY ARCHIVE PIPELINE
+            </div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface leading-tight">
+              LOOKING FOR A FAN TRANSLATION OR NICHE JAPANESE RELEASE?
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+              Missing <em>Persona 2: Eternal Punishment (PSP English Patch)</em>, original Megami Ibunroku Persona (PS1 uncensored), or esoteric drama CDs? Submit the entry barcode or release year to trigger admin review and score tracking.
+            </p>
+</div>
+</div>
+<div class="flex-shrink-0 w-full lg:w-auto">
+<button class="w-full lg:w-auto bg-primary-container text-on-surface comic-border font-label-lg text-label-lg uppercase px-6 py-4 comic-shadow hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_#1a1c1c] active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+            Suggest This Title for Admin Approval
+          </button>
+</div>
+</div>
+</section>
+<!-- SECTION 5: INTERACTIVE NO-RESULTS / TYPO HELPER COMPONENT (Toggleable Preview) -->
+<section class="comic-border bg-surface-container-low p-6">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-tertiary"></span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">
+            DIAGNOSTIC HELPER: ZERO-HIT QUERY PREVIEW &amp; TYPO RESOLUTION
+          </h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase bg-surface-container-lowest px-2 py-0.5 comic-border">
+          SYSTEM COMPONENT PREVIEW
+        </span>
+</div>
+<!-- Helper Box Layout -->
+<div class="comic-border bg-surface-container-lowest p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Panel 1: Typo suggestions -->
+<div class="border-b-[2.5px] md:border-b-0 md:border-r-[2.5px] border-on-surface pb-4 md:pb-0 md:pr-4">
+<div class="font-label-md text-label-md uppercase text-tertiary mb-1">TYPO DETECTION ENGINE</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-3">
+            Did you mean to type one of these verified studio franchises?
+          </p>
+<div class="flex flex-wrap gap-1.5">
+<button class="bg-surface-container hover:bg-primary-container font-label-sm text-label-sm uppercase px-2 py-1 comic-border transition-colors">
+              "Shin Megami Tensei"
+            </button>
+<button class="bg-surface-container hover:bg-primary-container font-label-sm text-label-sm uppercase px-2 py-1 comic-border transition-colors">
+              "Metaphor: ReFantazio"
+            </button>
+<button class="bg-surface-container hover:bg-primary-container font-label-sm text-label-sm uppercase px-2 py-1 comic-border transition-colors">
+              "Soul Hackers 2"
+            </button>
+</div>
+</div>
+<!-- Panel 2: Obfuscated spoiler / Unreleased toggle -->
+<div class="border-b-[2.5px] md:border-b-0 md:border-r-[2.5px] border-on-surface pb-4 md:pb-0 md:pr-4">
+<div class="font-label-md text-label-md uppercase text-on-surface mb-1">UNRELEASED CODED TITLE</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-2">
+            Upcoming Persona 6 leak metadata is redacted by editorial embargo:
+          </p>
+<!-- Interactive Redaction Block (Design System Token) -->
+<div class="bg-on-surface text-transparent hover:text-primary-container cursor-pointer p-2 font-headline-sm text-headline-sm uppercase text-center comic-border select-none transition-colors" id="spoiler-block" onclick="this.classList.toggle('bg-on-surface'); this.classList.toggle('text-transparent'); this.classList.toggle('bg-primary-container'); this.classList.toggle('text-on-surface'); this.innerText = this.innerText === 'CLICK TO REVEAL REDACTED ARCHIVE' ? 'PROJECT CODE: XRD-77 (PERSONA 6 / COLOR THEME: GREEN)' : 'CLICK TO REVEAL REDACTED ARCHIVE';">
+            CLICK TO REVEAL REDACTED ARCHIVE
+          </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-1">Tap black bar to decrypt editorial record</div>
+</div>
+<!-- Panel 3: Quick Direct Submission Link -->
+<div>
+<div class="font-label-md text-label-md uppercase text-on-surface mb-1">DIRECT SUBMISSION TICKET</div>
+<p class="font-body-sm text-body-sm text-on-surface mb-3">
+            If zero hits appear for your exact query, our editors review unindexed ROM hacks within 24 hours.
+          </p>
+<a class="inline-flex items-center gap-1.5 bg-on-surface text-surface-container-lowest font-label-md text-label-md uppercase px-3 py-2 comic-shadow-sm hover:bg-tertiary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="confirmation_number">confirmation_number</span>
+            Open Missing Title Ticket
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Component Anchor) -->
+<footer class="w-full bg-surface dark:bg-inverse-surface border-t-[3px] border-on-surface dark:border-outline-variant mt-12">
+<div class="w-full max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Brand & Copyright -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left gap-2">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container comic-border px-2 py-0.5 font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface uppercase">
+            SAINT REGUS
+          </div>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface dark:text-inverse-on-surface">
+            UNFILTERED CRITICISM
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface max-w-md">
+          © 2025 SAINT REGUS GAMING JOURNALISM. ALL RIGHTS RESERVED. RAW &amp; UNFILTERED.
+        </p>
+</div>
+<!-- Mandatory Footer Links -->
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-center">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-title-md hover:text-on-surface hover:underline transition-colors" href="#">
+          Suggest a Missing Game
+        </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-title-md hover:text-on-surface hover:underline transition-colors" href="#">
+          Community Guidelines
+        </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-title-md hover:text-on-surface hover:underline transition-colors" href="#">
+          Help Center
+        </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-title-md hover:text-on-surface hover:underline transition-colors" href="#">
+          Privacy Policy
+        </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-title-md hover:text-on-surface hover:underline transition-colors" href="#">
+          Terms of Service
+        </a>
+</div>
+</div>
+</footer>
+</body></html>
