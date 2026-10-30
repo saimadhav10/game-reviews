@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
-const config = JSON.parse(await readFile("wrangler.jsonc", "utf8"));
+import { parse } from "jsonc-parser";
+const config = parse(await readFile("wrangler.jsonc", "utf8"));
 const failures = [];
 if (
   !config.d1_databases?.[0]?.database_id ||

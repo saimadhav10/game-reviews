@@ -2,6 +2,8 @@
 
 A community game review website built from the supplied `uiassets` references. React/TypeScript handles the interface; a Cloudflare Worker and D1 database handle persistent data and moderation; Firebase handles accounts.
 
+Live website: https://gamereviews.gamereviews-saimadhav10.workers.dev
+
 ## Local development
 
 Use **Node.js 24 LTS** and npm. No paid accounts or live service keys are needed for local development.
@@ -51,5 +53,7 @@ The starter catalog contains 14 actual games. No community reviews, accounts, vo
 ## Production
 
 See [deployment instructions](docs/DEPLOYMENT.md), [product requirements](docs/REQUIREMENTS.md), and [verification results](docs/VERIFICATION.md). Production is designed for free Cloudflare Workers/D1 and Firebase Spark allowances. Quota limits still apply. No custom domain purchase or paid plan is required.
+
+The established Firebase project is connected and its providers/domain are configured. `npm run setup:firebase` reconnects that project through the signed-in owner without printing keys. After the owner's first Google sign-in on the website, `npm run setup:owner-admin` initializes administrator access without replacing an existing administrator list.
 
 Never commit `.dev.vars`, `.env*`, `.local/`, or authentication credentials. Public Firebase web configuration is returned by `/api/config`; server-only integration secrets remain in Worker environment settings. The browser build does not require `VITE_*` variables.

@@ -1,5 +1,15 @@
 # Deployment
 
+## Established resources
+
+- Repository: https://github.com/saimadhav10/game-reviews
+- Website: https://gamereviews.gamereviews-saimadhav10.workers.dev
+- Cloudflare Worker: `gamereviews`; account subdomain: `gamereviews-saimadhav10`.
+- D1 database: `gamereviews`, ID `fd70728c-244b-4309-a590-66f764198e36`.
+- Firebase project: `gamereviews-saimadhav10`, active with email/password and Google sign-in enabled. No billing account is linked.
+
+Live account services are connected. Initial console onboarding must be completed by the project owner when creating a new Firebase project; the remaining configuration can then be performed with the setup helper. Reuse the established project and database.
+
 ## Services
 
 - Cloudflare Workers with static assets and D1: [pricing](https://developers.cloudflare.com/workers/platform/pricing/), [database allowances](https://developers.cloudflare.com/d1/platform/pricing/).
@@ -14,11 +24,28 @@ Stay on free plans and use the free `workers.dev` address. Do not attach billing
 2. Register a web app and obtain its project ID and web API key.
 3. Enable **Email/Password** and **Google** in Authentication → Sign-in method. Google setup requires choosing a support email.
 4. Add the deployed website hostname to Authentication → Settings → Authorized domains.
-5. Configure the email templates' custom action URL as `https://YOUR-WORKER-HOST/auth/action`. The application handles verification and password reset links there.
+5. The current project uses Firebase's built-in verification/reset action pages, with continue links returning to GameReviews. If a custom action URL is configured later in Firebase Console, use `https://YOUR-WORKER-HOST/auth/action`; the application also handles those links. The setup helper falls back to the managed action pages if the template API rejects customization.
 6. Set `vars.FIREBASE_PROJECT_ID` in `wrangler.jsonc` to the real project ID. Store the Firebase web API key with `npx wrangler secret put FIREBASE_WEB_API_KEY`. Paste it through the command's hidden prompt; do not put keys in shell arguments or chat.
 7. Create and verify the owner's site account. Find its UID in Firebase Authentication → Users. Store it with `npx wrangler secret put ADMIN_UIDS`. Multiple admins use comma-separated Firebase UIDs. A display name, email, or public profile ID never grants admin access.
 
 The application fetches its public Firebase configuration from `/api/config`, so changing server-side configuration does not require rebuilding a client environment file. Never set `FIREBASE_AUTH_EMULATOR_HOST` in production. The server rejects emulator authentication on public hosts.
+
+For this established project, after owner sign-in to the Firebase CLI:
+
+```sh
+npm run setup:firebase
+npm run deploy
+```
+
+The helper reuses the web app, configures the two providers and authorized domain, and stores the API key privately and through Wrangler's stdin. It uses the owner's selected Firebase account email as Google support email, as authorized for this project. It does not accept terms, configure billing, or create paid resources.
+
+After the owner signs into GameReviews once with that Google account, initialize the admin role:
+
+```sh
+npm run setup:owner-admin
+```
+
+This looks up the verified owner account, stores its Firebase UID in `ADMIN_UIDS`, and refuses to replace an existing administrator list. Refresh GameReviews afterward. Additional administrators should be added by deliberately updating the UID list through Wrangler's hidden prompt.
 
 ## Cloudflare
 

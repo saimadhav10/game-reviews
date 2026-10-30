@@ -1,5 +1,5 @@
 {
-  "name": "gamereviews",
+  "name": "gamereviews-saimadhav10",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -17,7 +17,9 @@
     "test": "firebase emulators:exec --only auth --project demo-gamereviews-tests --config firebase.test.json \"vitest run\"",
     "deploy:check": "node scripts/check-deploy.mjs",
     "deploy": "npm run deploy:check && npm run build && wrangler deploy",
-    "format": "prettier --write src worker shared tests scripts *.json *.jsonc *.ts *.html"
+    "format": "prettier --write src worker shared tests scripts *.json *.jsonc *.ts *.html",
+    "setup:firebase": "node scripts/connect-firebase.cjs",
+    "setup:owner-admin": "node scripts/setup-owner-admin.cjs"
   },
   "dependencies": {
     "@fontsource/anton": "5.3.0",
@@ -37,6 +39,7 @@
     "@vitejs/plugin-react": "6.1.2",
     "concurrently": "10.0.6",
     "firebase-tools": "15.34.2",
+    "jsonc-parser": "3.3.1",
     "miniflare": "5.20261023.3-beta",
     "prettier": "3.9.10",
     "typescript": "7.0.2",

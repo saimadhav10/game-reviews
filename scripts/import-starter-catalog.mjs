@@ -145,7 +145,7 @@ for (const [index, [slug, appid, platforms, genres]] of titles.entries()) {
       `public/images/${slug}-hero.jpg`,
       Buffer.from(await heroResponse.arrayBuffer()),
     );
-  const rawDate = Date.parse(game.release_date?.date ?? "");
+  const rawDate = Date.parse(`${game.release_date?.date ?? ""} UTC`);
   const release = Number.isFinite(rawDate)
     ? new Date(rawDate).toISOString().slice(0, 10)
     : "";
