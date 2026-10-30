@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffe600" />
+    <script>
+      (() => {
+        let savedTheme;
+        try {
+          savedTheme = localStorage.getItem("gamereviews-theme");
+        } catch {
+          // The toggle still works when browser storage is unavailable.
+        }
+        document.documentElement.dataset.theme =
+          savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+      })();
+    </script>
     <meta
       name="description"
       content="Your games. Your verdict. Discover community game ratings, write honest reviews, and join the discussion on GameReviews."

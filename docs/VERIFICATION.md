@@ -18,6 +18,7 @@ Verified on 2026-10-30.
 - The production Google Cloud billing API confirms `billingEnabled: false`.
 - Starter release dates were checked and corrected to parse calendar dates in UTC, independent of the developer machine's time zone.
 - Published artwork was visually inspected for legacy website branding. All 14 games and 28 deployed artwork URLs were checked against the clean local assets; the catalog importer now uses only game artwork.
+- The header includes a keyboard-accessible light/dark toggle. The initial theme uses a saved browser preference or the device preference, applied before the app renders. Six production-bootstrap preference/storage scenarios and 12 light/dark text contrast combinations pass programmatic checks. Page scrollbar styling preserves scrolling; nested discussion, tab, and dialog scrolling is retained.
 
 ## Tested behavior
 

@@ -18,6 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { useAuth } from "./auth";
+import { ThemeToggle } from "./theme";
 import { api, errorMessage, json } from "./lib/api";
 import type { Game, Review } from "./types";
 
@@ -128,6 +129,7 @@ export function Header() {
             </NavLink>
           )}
         </nav>
+        <ThemeToggle />
         {identity ? (
           <div className="account-wrap" ref={accountRef}>
             <button
