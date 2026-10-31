@@ -15,7 +15,7 @@ const {
 const hosting = require("firebase-tools/lib/hosting/api");
 
 const project = "gamereviews-saimadhav10";
-const site = "https://gamereviews.gamereviews-saimadhav10.workers.dev";
+const site = "https://gamereviews.saimadhav.workers.dev";
 function cli(name, args, input) {
   const binary =
     name === "firebase"

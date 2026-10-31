@@ -7,7 +7,7 @@
 A community for honest game ratings, thoughtful reviews, and the conversations that follow.
 
 <p>
-  <a href="https://gamereviews.gamereviews-saimadhav10.workers.dev"><strong>Visit GameReviews ↗</strong></a>
+  <a href="https://gamereviews.saimadhav.workers.dev"><strong>Visit GameReviews ↗</strong></a>
   &nbsp; · &nbsp;
   <a href="docs/DEPLOYMENT.md">Deployment guide</a>
   &nbsp; · &nbsp;
@@ -146,6 +146,6 @@ Credentials belong in ignored local environment files and deployment secrets. Ke
 
 **YOUR GAMES. YOUR VERDICT.**
 
-[Find your next game ↗](https://gamereviews.gamereviews-saimadhav10.workers.dev/games)
+[Find your next game ↗](https://gamereviews.saimadhav.workers.dev/games)
 
 </div>

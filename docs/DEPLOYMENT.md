@@ -3,8 +3,8 @@
 ## Established resources
 
 - Repository: https://github.com/saimadhav10/game-reviews
-- Website: https://gamereviews.gamereviews-saimadhav10.workers.dev
-- Cloudflare Worker: `gamereviews`; account subdomain: `gamereviews-saimadhav10`.
+- Website: https://gamereviews.saimadhav.workers.dev
+- Cloudflare Worker: `gamereviews`; account subdomain: `saimadhav`.
 - D1 database: `gamereviews`, ID `fd70728c-244b-4309-a590-66f764198e36`.
 - Firebase project: `gamereviews-saimadhav10`, active with email/password and Google sign-in enabled. No billing account is linked.
 
@@ -29,6 +29,8 @@ Stay on free plans and use the free `workers.dev` address. Do not attach billing
 7. Create and verify the owner's site account. Find its UID in Firebase Authentication → Users. Store it with `npx wrangler secret put ADMIN_UIDS`. Multiple admins use comma-separated Firebase UIDs. A display name, email, or public profile ID never grants admin access.
 
 The application fetches its public Firebase configuration from `/api/config`, so changing server-side configuration does not require rebuilding a client environment file. Never set `FIREBASE_AUTH_EMULATOR_HOST` in production. The server rejects emulator authentication on public hosts.
+
+When changing the Cloudflare account subdomain, update the website URL in this guide, the README, and `scripts/connect-firebase.cjs`. Replace the previous website hostname in Firebase Authentication's authorized domains while retaining the managed Firebase domains. The Firebase project ID, managed authentication handler, and D1 database ID do not change. API calls, email continue links, and Steam callbacks derive their origin from the current request or browser location.
 
 For this established project, after owner sign-in to the Firebase CLI:
 
