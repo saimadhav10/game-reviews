@@ -9,8 +9,6 @@ A community for honest game ratings, thoughtful reviews, and the conversations t
 <p>
   <a href="https://gamereviews.gamereviews-saimadhav10.workers.dev"><strong>Visit GameReviews ↗</strong></a>
   &nbsp; · &nbsp;
-  <a href="#run-it-locally">Run locally</a>
-  &nbsp; · &nbsp;
   <a href="docs/DEPLOYMENT.md">Deployment guide</a>
   &nbsp; · &nbsp;
   <a href="https://github.com/saimadhav10/game-reviews/issues">Report an issue</a>
@@ -92,7 +90,7 @@ flowchart LR
     API -. "account linking" .-> Steam["Steam OpenID · optional"]
 ```
 
-Production targets **Cloudflare Free and Firebase Spark**, using a free `workers.dev` address. Service quotas still apply. Local development needs no paid accounts or production API keys.
+Production targets **Cloudflare Free and Firebase Spark**, using a free `workers.dev` address. Service quotas still apply.
 
 <details>
 <summary><strong>Current catalog and integration status</strong></summary>
@@ -103,41 +101,6 @@ Production targets **Cloudflare Free and Firebase Spark**, using a free `workers
 - **Steam:** optional account linking is implemented through OpenID. No Steam Web API key or playtime proof is required. A real login round trip remains to be verified.
 - **Moderation:** admin queues cover reviews, replies, revisions, and game suggestions. Admin access is configured through Firebase user IDs stored server-side.
 - **Policies:** the privacy and terms pages still need the website owner's final details.
-
-</details>
-
-## Run it locally
-
-Use **Node.js 24 LTS** and npm.
-
-```sh
-git clone https://github.com/saimadhav10/game-reviews.git
-cd game-reviews
-npm ci
-npm run setup:local
-npm run db:migrate
-npm run db:seed
-npm run build
-npm run dev
-```
-
-| Open                              | Address                                 |
-| :-------------------------------- | :-------------------------------------- |
-| Website                           | [127.0.0.1:5173](http://127.0.0.1:5173) |
-| Authentication emulator dashboard | [127.0.0.1:4000](http://127.0.0.1:4000) |
-
-The local authentication emulator supports email/password registration, verification links, password resets, and simulated Google sign-in. These development identities are separate from real accounts.
-
-<details>
-<summary><strong>Create a local administrator</strong></summary>
-
-With the development services running, open another terminal:
-
-```sh
-npm run setup:admin-local
-```
-
-The helper writes local-only sign-in details to `.local/admin.env` and updates the ignored `.dev.vars`. It never creates a production account. Run it again after restarting the authentication emulator: emulator accounts are ephemeral, while local D1 data persists in `.wrangler/`.
 
 </details>
 
